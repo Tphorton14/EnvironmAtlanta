@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recycling News Feed</title>
+</head>
+<body>
+    <h1>Recycling and Environmental Awareness News</h1>
+    <th scope="row"></th>
+</body>
+</html>
+
+<script>
+    const NewsAPI = require('newsapi');
+    const newsapi = new NewsAPI('newsFeedAPi');
+
+    var today = new Date();
+    var ddToday = String(today.getDate()).padStart(2, '0');
+    var mmToday = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyyToday = today.getFullYear();
+
+    today = yyyyToday + '/' + ddToday + '/' + mmToday;
+    console.log(today);
+
+    var lastWeek = new Date();
+    var ddLastWeek = String(lastWeek.getDate() - 7).padStart(2, '0');
+    var mmLastWeek = String(lastWeek.getMonth() + 1).padStart(2, '0');
+    var yyyyLastWeek = lastWeek.getFullYear();
+    lastWeek = yyyyLastWeek; + '-' + ddLastWeek + '-' + mmLastWeek;
+    console.log(lastWeek);
+
+
+    // To query /v2/everything
+    // You must include at least one q, source, or domain
+    newsapi.v2.everything({
+        q: 'recycling, Atlanta, environment, green',
+        sources: 'treehugger,grist, national geographic, huffpost, greepeace',
+        domains: 'treehugger.com, grist.org, nationalgeographic.com/environment/, huffpost.com/impact/green/, greenpeace.org/usa/',
+        from: 'lastWeek',
+        to: 'today',
+        language: 'en',
+        sortBy: 'date',
+        page: 2
+    }).then(response => {
+        let newsArticlesArray = [];
+
+        console.log(response);
+        var article = {
+        '<th scope="row">'+ {response.title} + '</th>',
+        '<th scope="row">'+ {response.description} + '</th>',
+        '<th scope="row">'+ {response.url} + '</th>',
+        '<th scope="row">'+ {response.publishedAt} + '</th>',
+        '<th scope="row">'+ {response.content} + '</th>';
+        }
+        
+        newsArticlesArray.push(article);
+    });
+</script>

@@ -1,17 +1,26 @@
 {
-  "name": "community",
+  "name": "environmatlanta",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tphorton14/EnvironmAtlanta.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tphorton14/EnvironmAtlanta/issues"
+  },
+  "homepage": "https://github.com/Tphorton14/EnvironmAtlanta#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "sequelize": "^5.16.0"
+    "nodemon": "^1.19.1",
+    "sequelize": "^5.16.0",
+    "sequelize-cli": "^5.5.0"
   }
 }
