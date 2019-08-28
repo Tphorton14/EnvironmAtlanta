@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Recycling News Feed</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <h1>Recycling and Environmental Awareness News</h1>
-    <th scope="row"></th>
+    <div>
+        <div class="recycling-news-ticker" id="json">
+            <div class="recycling-news">
+                <ul>
+                    <li class = "recyling-news-feed"><span class="bn-loader-text"></span>Loading...</span></li>
+                </ul>
+            </div>
+            <div class="bn-controls">
+                <button><span class="bn-arrow bn-prev"></span></button>
+                <button><span class="bn-action"></span></button>
+                <button><span class="bn-arrow bn-next"></span></button>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
 
 <script>
@@ -47,14 +67,17 @@
         let newsArticlesArray = [];
 
         console.log(response);
-        var article = {
-        '<th scope="row">{response.title}</th>',
-        '<th scope="row">'+ {response.description} + '</th>',
-        '<th scope="row">'+ {response.url} + '</th>',
-        '<th scope="row">'+ {response.publishedAt} + '</th>',
-        '<th scope="row">'+ {response.content} + '</th>';
-        }
-        
+        var article = [
+            `<th scope="row">${response.title}</th>`,
+            `<th scope="row">${response.description}</th>`,
+            `<th scope="row">${response.url}</th>`,
+            `<th scope="row">${response.publishedAt}</th>`,
+            `<th scope="row">${response.content}</th>`
+        ];
+
         newsArticlesArray.push(article);
-    });
+
+        $('#recycling-news-feed').append(newsArticlesArray);
+
+	});
 </script>
