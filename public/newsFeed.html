@@ -108,14 +108,14 @@
     var mmToday = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyyToday = today.getFullYear();
 
-    today = yyyyToday + '/' + ddToday + '/' + mmToday;
+    today = yyyyToday + '-' + ddToday + '-' + mmToday;
     console.log(today);
 
     var lastWeek = new Date();
     var ddLastWeek = String(lastWeek.getDate() - 7).padStart(2, '0');
     var mmLastWeek = String(lastWeek.getMonth() + 1).padStart(2, '0');
     var yyyyLastWeek = lastWeek.getFullYear();
-    lastWeek = yyyyLastWeek; + '/' + ddLastWeek + '/' + mmLastWeek;
+    lastWeek = yyyyLastWeek; + '-' + ddLastWeek + '-' + mmLastWeek;
     console.log(lastWeek);
 
 
@@ -125,8 +125,8 @@
         q: 'recycling, Atlanta, environment, green',
         sources: 'treehugger,grist, national geographic, huffpost, greepeace',
         domains: 'treehugger.com, grist.org, nationalgeographic.com/environment/, huffpost.com/impact/green/, greenpeace.org/usa/',
-        from: 'lastWeek',
-        to: 'today',
+        from: lastWeek,
+        to: today,
         language: 'en',
         sortBy: 'date',
         page: 2

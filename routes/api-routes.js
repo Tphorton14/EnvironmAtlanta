@@ -52,6 +52,7 @@ module.exports = function (app) {
     app.post("/api/newsFeed/", function (req, res) {
         db.Post.create({})
             .then(function (dbPost) {
+                console.log(dbPost);
                 res.send(dbPost);
             });
     });
