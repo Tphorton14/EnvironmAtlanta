@@ -21,8 +21,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "mysql2": "^1.7.0",
-    "nodemon": "^1.19.1",
-    "sequelize": "^5.17.1",
+    "newsapi": "^2.4.0",
+    "sequelize": "^5.17.0",
     "sequelize-cli": "^5.5.0"
   }
 }

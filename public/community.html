@@ -8,54 +8,85 @@
     <title>Community</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
+        integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
 </head>
 
 <body>
-        <header>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                                <a class="navbar-brand" href="#">Navbar</a>
-                                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav mr-auto">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Recycle Near Me</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Charity Orgs</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">News Feed</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Community </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
+    <header>
+        <div class="mainBack">
+            <div class="mainNav">
+                <nav class="navbar navbar-expand-lg" class="text-center">
+                    <a class="navbar-brand box" href="#"><i class="fas fa-recycle">EnvironmAtlanta</i></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link color" href="/">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="/recycleNearYou">Recycle Near Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="/charity">Charities</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="/newsFeed">Current News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="/community">Community</a>
+                            </li>
+
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0 color" type="submit">Search</button>
+                        </form>
+
+
+
                     </div>
-                </div>
-            </header>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h3>Post to the EnvironmAtlanta Community!</h3>
             </div>
-        </div>
+            </nav>
+            <div>
+
+                <div class="nav navbar-nav userNav_nav">
+                    <ul class="userNav_list">
+                        <li class="userNav_item">
+
+                        <li class="userNav_item">
+                            <a class="userNav_link" href="/en-US/account/sign_up">Sign up</a>
+                        </li>
+
+                        <li class="userNav_item">
+                            <a class="userNav_link" href="/en-US/account/sign_in">Sign in</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+    </header>
+    <div class="container">
         <div class="row" id="createPosts">
-            <div class="col-md-4 ">
+            <p>
+                <h3>Post to the EnvironmAtlanta Community</h3>
+            </p>
+            <div class="col-md-5 offset-md-3">
                 <form id="communityPost">
                     <div class="form-group">
                         <label for="user">User:</label>
