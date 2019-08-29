@@ -1,15 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Recycling News Feed</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
+        integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
+
 </head>
+
 <body>
+    <header>
+        <div class="mainBack">
+            <div class="mainNav">
+                <nav class="navbar navbar-expand-lg" class="text-center">
+                    <a class="navbar-brand box" href="#"><i class="fas fa-recycle">EnvironmAtlanta</i></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link color" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="#">Recycle Near Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="#">Charities</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="#">Current News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="#">Community</a>
+                            </li>
+
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0 color" type="submit">Search</button>
+                        </form>
+
+
+
+                    </div>
+            </div>
+            </nav>
+            <div>
+
+                <div class="nav navbar-nav userNav_nav">
+                    <ul class="userNav_list">
+                        <li class="userNav_item">
+
+                        <li class="userNav_item">
+                            <a class="userNav_link" href="/en-US/account/sign_up">Sign up</a>
+                        </li>
+
+                        <li class="userNav_item">
+                            <a class="userNav_link" href="/en-US/account/sign_in">Sign in</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+    </header>
+    
     <h1>Recycling and Environmental Awareness News</h1>
     <th scope="row"></th>
 </body>
+
 </html>
 
 <script>
@@ -48,13 +118,13 @@
 
         console.log(response);
         var article = {
-        '<th scope="row">'+ {response.title} + '</th>',
-        '<th scope="row">'+ {response.description} + '</th>',
-        '<th scope="row">'+ {response.url} + '</th>',
-        '<th scope="row">'+ {response.publishedAt} + '</th>',
-        '<th scope="row">'+ {response.content} + '</th>';
+            '<th scope="row">'+ { response.title } + '</th>',
+            '<th scope="row">'+ { response.description } + '</th>',
+            '<th scope="row">'+ { response.url } + '</th>',
+            '<th scope="row">'+ { response.publishedAt } + '</th>',
+            '<th scope="row">'+ { response.content } + '</th>';
         }
-        
+
         newsArticlesArray.push(article);
     });
 </script>
