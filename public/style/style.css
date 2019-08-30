@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 body{
     background-image: url("../images/grass.png");
      /* background-image: url("https://image.shutterstock.com/image-photo/lush-spring-green-grass-background-260nw-1409508311.jpg"); */
@@ -19,17 +20,33 @@ body{
 
     background-color: darkgreen;
     color:white;
+
+.back {
+    position: relative;
+    background: url("https://s.hdnux.com/photos/75/10/13/16024311/4/rawImage.jpg") #414143;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    background-blend-mode: multiply;
+}
+
+.recycle{
+    text-align: center;
+    
+
 }
 
 .box {
     background: white;
-    font-size: 1.9rem;
+    font-size: 1.9em;
     color: #00b944;
-    padding: 25px;
+    padding: 15px;
+    font-family: 'PT Serif', serif;
 }
 
 .color {
     color: white;
+    text-transform: uppercase;
 }
 
 .userNav_nav {
@@ -38,7 +55,7 @@ body{
     margin: 0px 450px 0px 0px;
     background: rgb(255, 254, 254);
     padding: 0px 40px 0px 0px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
 
 ul {
@@ -62,9 +79,11 @@ ul {
 }
 
 .mainBack {
+    width: 100%;
     background: #00b944;
     z-index: 103;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(180, 180, 180, 0.904);
+    position: fixed;
 }
 
 .mainNav {
@@ -72,6 +91,7 @@ ul {
     margin: 0 auto;
     padding: 0px 40px 0px 40px;
     background: rgba(255, 255, 255, 0);
+    
 }
 
-@media (min-width: 1200px){};
+
