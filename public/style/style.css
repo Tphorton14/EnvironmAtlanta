@@ -2,6 +2,25 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url("../images/grass.png");
+     /* background-image: url("https://image.shutterstock.com/image-photo/lush-spring-green-grass-background-260nw-1409508311.jpg"); */
+     background-size:cover;
+     background-repeat: no-repeat;
+     height:100vh;
+ }
+
+ #location{
+    border:1px;
+    border-color:green;
+    border-style: solid;
+  }
+  header{
+
+    background-color: darkgreen;
+    color:white;
+}
+
 .box {
     background: white;
     font-size: 1.9rem;
@@ -55,15 +74,4 @@ ul {
     background: rgba(255, 255, 255, 0);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 1200px);
+@media (min-width: 1200px){};
