@@ -17,6 +17,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
+require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
 passport.use(new LocalStrategy(
   function (username, password, done) {
