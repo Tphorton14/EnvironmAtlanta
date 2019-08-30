@@ -1,4 +1,23 @@
-// $(document).ready(function() {
+$(document).ready(function() {
+
+    // User input
+    $("#submit").on("click", function (event) {
+        event.preventDefault();
+
+        const input = [];
+        let select = $('label');
+        console.log("boom");
+
+        input.push(select.value);
+
+        const userData = {
+            user: $("#users").val().trim(),
+            input: $("#inputs").val().trim()
+        }
+        console.log(userData);
+    });
+
+}
 
 
 // // postContainer holds all of Community posts
