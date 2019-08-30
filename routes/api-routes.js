@@ -28,13 +28,28 @@ module.exports = function(app) {
   // POST route for saving a new post (COMMUNITY PAGE)
   app.post("/api/posts", function(req, res) {
     console.log(req.body);
-    db.Post.create({
-      user: req.body.user,
-      body: req.body.body,
+    db.User.findOne({
+      where: {
+        userName: req.body.user
+      }
+    }).then(function(user) {
+      if (user){
+        db.Post.create({
+          userId: user.id,
+          body: req.body.body,
+        })
+          .then(function(dbPost) {
+            res.json(dbPost);
+          });
+      }
     })
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
+    // db.Post.create({
+    //   user: req.body.user,
+    //   body: req.body.body,
+    // })
+    //   .then(function(dbPost) {
+    //     res.json(dbPost);
+    //   });
   });
 
   // DELETE route for deleting posts (COMMUNITY PAGE)
