@@ -1,8 +1,14 @@
-var express = require('express');
-var app = express();
+var path = require("path");
 
+// Routes
+// =============================================================
+module.exports = function(app) {
 
+app.get("/", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/index.html"));
+       });
 
-app.post(req, res) {
-    
-}
+app.get("/signup", function(req, res) {
+ res.sendFile(path.join(__dirname, "../public/user-page.html"));
+});
+};

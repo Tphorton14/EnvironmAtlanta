@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
+    "seed":"node ./seeds/users-db.js",
     "dev": "nodemon server.js"
   },
   "repository": {
@@ -20,8 +21,13 @@
   "homepage": "https://github.com/Tphorton14/EnvironmAtlanta#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "faker": "^4.1.0",
     "mysql2": "^1.7.0",
     "newsapi": "^2.4.0",
+    "nodemon": "^1.19.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "sequelize": "^5.17.0",
     "sequelize-cli": "^5.5.0"
   }
