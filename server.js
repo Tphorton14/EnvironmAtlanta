@@ -15,20 +15,11 @@ var PORT = process.env.PORT || 8080;
 var db = require("./models");
 
 
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory
 app.use(express.static("public"));
-
-// Routes
-// =============================================================
-
-
-
-// require("./public/routes/api-routes")(app);
-// require("./public/routes/html-routes")(app);
 
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
