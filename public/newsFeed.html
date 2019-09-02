@@ -86,7 +86,7 @@
     <div class="spacer">
         &nbsp;
     </div>
-<div class = "container">
+<div class = "container-fluid">
         <div class="recycling-news-ticker" id="json">
             <div class="recycling-news">
                 <ul id = "newsFeedList">
@@ -118,7 +118,7 @@
                                 <li id = "author"><b>Author: </b>${res.articles[i].author}</li> 
                                 <li id ="date"><b>Date: </b>${res.articles[i].publishedAt}</li>
                                 <li><b>Source: </b>${res.articles[i].source.name}</li>
-                                <p><b>Briefing: </b>${res.articles[i].description} <span><a href =${res.articles[i].url}><b id = "more">(more...)</b></span></p>
+                                <p><b>Briefing: </b>${res.articles[i].description} <span><a href =${res.articles[i].url} target="_blank"><b id = "more">(more...)</b></span></p>
                             </ul>  
                 </div>`];
            
