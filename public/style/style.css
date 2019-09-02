@@ -74,6 +74,98 @@ ul {
     
 }
 
+.spacer
+{
+    width: 100%;
+    height: 20vh;
+}
+
+#newsFeedList {
+    padding-left: 0;
+    display: inline;
+}
+.container-fluid {
+    margin: 15px;
+    width: auto;
+    
+}
+#json {
+    flex: auto;
+}
+
+h4 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 32px;
+    text-align: center;
+    color: yellowgreen;
+}
+
+/* #newsFeedTitle {
+    font-size: 24px;
+} */
+
+
+.newsFeedBody {
+    background: black;
+    width: 100%;
+}
+
+#newsArticleTron {
+    padding: 15px;
+    margin: 2px;
+    background: #414a4c;
+    color: lightgray;
+}
+
+#nfImg {
+    float: left;
+    height: auto;
+    width: 30%;
+    margin-right: 10px;
+    clear: both;
+}
+
+#newsFeedAbout {
+    float: right;
+    height: auto;
+    padding: 0;
+    justify-content: start;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ul li {
+    list-style-type: none;
+    }
+
+.middle {
+    overflow: auto;
+    justify-content: start;
+}
+
+#content {
+    float: left;
+}
+
+b {
+    color: steelblue;
+    font-style: italic;
+}
+
+#more {
+    color: goldenrod;
+}
+
+h1 {
+    padding: 5px;
+}
+
+
+#recyling-news-feed {
+    padding: 0;
+}
 
 
 
@@ -85,4 +177,9 @@ ul {
 
 
 
-@media (min-width: 1200px);
+
+
+
+
+
+/* @media (min-width: 1200px); */

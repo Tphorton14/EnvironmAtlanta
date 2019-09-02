@@ -4,39 +4,33 @@ $(document).ready(function() {
 // postContainer holds all of Community posts
 const postContainer = $("#showPosts");
 
-// Click event for the delete button
-$(document).on("click", "button.delete", handlePostDelete);
 // Variable to hold Community posts
-const posts;
+const posts = "";
 
-// This function grabs posts from the database and updates the view
-function getPosts(user) {
-  userId = user || "";
-  if (userId) {
-    userId = "/?user_id=" + userId;
+
+$("#communityPost").on("submit", addPost)
+
+function addPost(event) {
+  event.preventDefault();
+  const userInput = $("#user").val().trim();
+  const postInput = $("#post").val().trim();
+  if (!postInput){
+    return;
   }
-  $.get("/api/posts" + userId, function(data) {
-    console.log("Posts", data);
-    posts = data;
-    if (!posts || !posts.length) {
-      displayEmpty(user);
-    }
-    else {
-      createRows();
-    }
-  });
+  console.log(postInput)
+
+  submitPost({user: userInput, body: postInput});
+  createRows();
+}
+function submitPost(postInput) {
+  $.post("/api/posts", postInput, function() {
+    postContainer.append(`<p>${postInput}</p>`);
+    console.log(postInput)
+})
 }
 
-// This function does an API call to delete posts
-function deletePost(id) {
-  $.ajax({
-    method: "DELETE",
-    url: "/api/posts/" + id
-  })
-    .then(function() {
-      getPosts();
-    });
-}
+
+
 
 // createRows handles appending all constructed post HTML inside postContainer
 function createRows() {
@@ -89,7 +83,8 @@ function createNewRow(post) {
   newPostCard.data("post", post);
   return newPostCard;
 }
-
+// Click event for the delete button
+$(document).on("click", "button.delete", handlePostDelete);
 // This function figures out which post we want to delete and then calls deletePost
 function handlePostDelete() {
   var currentPost = $(this)

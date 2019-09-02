@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +8,32 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
         integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style/style.css" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/style/style.css" type="text/css">
 </head>
 
 <body class="back">
 
-    
+
 
     <header>
         <div class="mainBack">
             <div class="mainNav">
                 <nav class="navbar navbar-expand-lg" class="text-center">
-                        <a class="navbar-brand box" href="#"><i class="fas fa-recycle recycle"><div>EnvironmAtlanta</div></i></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    <a class="navbar-brand box" href="#"><i class="fas fa-recycle recycle">
+                            <div>EnvironmAtlanta</div>
+                        </i></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -64,59 +69,61 @@
                 <div class="nav navbar-nav userNav_nav">
                     <ul class="userNav_list">
 
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                               SignUp
-                              </button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            SignUp
+                        </button>
 
                         <li class="userNav_item">
-                            <a class="userNav_link" href="/en-US/account/sign_in"><i class="fas fa-sign-in-alt"> Sign in</i></a>
+                            <a class="userNav_link" href="/en-US/account/sign_in"><i class="fas fa-sign-in-alt"> Sign
+                                    in</i></a>
                         </li>
                     </ul>
                 </div>
 
             </div>
     </header>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Signup</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Signup</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Name</label>
+                        <input type="text" class="form-control" id="exampleInputName" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="username" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Phone Number</label>
+                        <input type="password" class="form-control" id="phonenumber" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">City</label>
+                        <input type="password" class="form-control" id="cityname" placeholder="City">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            <div class="form-group">
-            <label for="exampleInputPassword1">Name</label>
-            <input type="text" class="form-control" id="exampleInputName" placeholder="Name">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="username" aria-describedby="emailHelp"
-                placeholder="Enter email">
-        </div>
-        <div class="form-group">    
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Phone Number</label>
-            <input type="password" class="form-control" id="phonenumber" placeholder="Phone Number">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">City</label>
-            <input type="password" class="form-control" id="cityname" placeholder="City">
-        </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
     </div>
-  </div>
 
 
 
