@@ -100,7 +100,7 @@ app.use('/api', api_routes);
 
 // app.use('/', api_routes);
 
-sequelize.sync()
+sequelize.sync({force: false})
   .then(() => app.listen(PORT, () => console.log('Listening on port %s', PORT)));
 
 module.exports = app;

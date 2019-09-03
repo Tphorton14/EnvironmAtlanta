@@ -72,12 +72,13 @@ module.exports = function (app) {
     console.log(req.body);
     db.User.findOne({
       where: {
-        userName: req.body.user
+        name: req.body.user
       }
-    }).then(function (user) {
-      if (user) {
-        db.Post.create({
-          userId: user.id,
+    }).then(function(user) {
+      console.log(user, "user")
+      if (user){
+        user.createPost({
+          name: user.name,
           body: req.body.body,
         })
           .then(function (dbPost) {
