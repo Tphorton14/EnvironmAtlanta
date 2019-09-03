@@ -2,6 +2,25 @@
     box-sizing: border-box;
 }
 
+
+body{
+    background-image: url("../images/grass.png");
+     /* background-image: url("https://image.shutterstock.com/image-photo/lush-spring-green-grass-background-260nw-1409508311.jpg"); */
+     background-size:cover;
+     background-repeat: no-repeat;
+     height:100vh;
+ }
+
+ #location{
+    border:1px;
+    border-color:green;
+    border-style: solid;
+  }
+  header{
+
+    background-color: darkgreen;
+    color:white;
+
 .back {
     position: relative;
     background: url("https://s.hdnux.com/photos/75/10/13/16024311/4/rawImage.jpg") #414143;
@@ -14,6 +33,7 @@
 .recycle{
     text-align: center;
     
+
 }
 
 .box {
@@ -181,14 +201,3 @@ a:active {
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* @media (min-width: 1200px); */
