@@ -16,10 +16,12 @@ body{
     border-color:green;
     border-style: solid;
   }
-  header{
+  .welcome{
 
     background-color: darkgreen;
     color:white;
+  }
+  
 
 .back {
     position: relative;
