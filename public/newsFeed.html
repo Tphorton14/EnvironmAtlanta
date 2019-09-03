@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
-<body class ="back">
+<body class ="blckBack">
     <header>
         <div class="mainBack">
             <div class="mainNav">
@@ -109,7 +109,7 @@
            let articles = [];
            for(let i = 0; i < res.articles.length; i++) {
            article = [`<div class = "jumbotron jumbotron-fluid" id= "newsArticleTron">
-                        <header><h4 id = "articleTitle">${res.articles[i].title}</h1></header>
+                        <header><h4 id = "articleTitle">${res.articles[i].title}</h4></header>
                             </header> 
                         <div class="middle">
                         <img src="${res.articles[i].urlToImage}" alt = "image" id="nfImg">

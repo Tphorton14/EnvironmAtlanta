@@ -77,9 +77,12 @@ ul {
 .spacer
 {
     width: 100%;
-    height: 18vh;
+    height: 10vh;
 }
 
+.blckBack {
+    background: black;
+}
 #newsFeedList {
     padding-left: 0;
     display: inline;
@@ -100,10 +103,6 @@ h4 {
     color: #f984ef;
 }
 
-/* #newsFeedTitle {
-    font-size: 24px;
-} */
-
 
 .newsFeedBody {
     background: black;
@@ -112,7 +111,7 @@ h4 {
 
 #newsArticleTron {
     padding: 15px;
-    margin: 2px;
+    margin: 3px;
     background: #282828;
     color: lightgray;
     border: solid 3px lightgray;
@@ -120,22 +119,25 @@ h4 {
 
 #newsFeedImage {
     clear: right;
+    margin-top: 10px;
 }
 #nfImg {
     float: left;
     height: auto;
     width: 25%;
-    margin-right: 15px;
+    margin: 20px;
     align-content: center;
 }
 
-/* #newsFeedAbout {
+#newsFeedAbout {
     float: right;
     padding-top: 0;
     justify-content: initial;
-    font-family: 'Times New Roman', Times, serif;
-    align-content: center;
-} */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    vertical-align: top;
+    font-size: 16px;
+    padding: 5px;
+}
 
 ul li {
     list-style-type: none;
