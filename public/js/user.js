@@ -38,5 +38,5 @@ $(document).ready(function () {
         })
     })
 
-    $("welcomeUser").append('<p>')
+    $("welcomeUser").append(`<p>${User.name}</p>`)
 })
