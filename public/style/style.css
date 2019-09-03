@@ -94,8 +94,6 @@ ul {
 }
 
 h4 {
-    margin-bottom: 0;
-    padding-bottom: 0;
     font-family: 'Permanent Marker', cursive;
     font-size: 30px;
     text-align: center;
@@ -120,22 +118,24 @@ h4 {
     border: solid 3px lightgray;
 }
 
+#newsFeedImage {
+    clear: right;
+}
 #nfImg {
     float: left;
     height: auto;
     width: 25%;
     margin-right: 15px;
-    clear: both;
+    align-content: center;
 }
 
-#newsFeedAbout {
+/* #newsFeedAbout {
     float: right;
-    height: auto;
-    padding: 0;
-    justify-content: start;
-    font-size: 14px;
+    padding-top: 0;
+    justify-content: initial;
     font-family: 'Times New Roman', Times, serif;
-}
+    align-content: center;
+} */
 
 ul li {
     list-style-type: none;
@@ -143,11 +143,7 @@ ul li {
 
 .middle {
     overflow: auto;
-    justify-content: start;
-}
-
-#content {
-    float: left;
+    align-content: center;
 }
 
 b {
@@ -167,6 +163,15 @@ b {
 
 a:active {
     color: brown;
+}
+
+.container-fluid {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#desc {
+    overflow: auto;
 }
 
 

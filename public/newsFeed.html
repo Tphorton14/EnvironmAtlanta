@@ -112,14 +112,14 @@
                         <header><h4 id = "articleTitle">${res.articles[i].title}</h1></header>
                             </header> 
                         <div class="middle">
-                            <div id = "newsFeedImage">
                         <img src="${res.articles[i].urlToImage}" alt = "image" id="nfImg">
                             <ul id ="newsFeedAbout>  
                                 <li id = "author"><b>Author: </b>${res.articles[i].author}</li> 
                                 <li id ="date"><b>Date: </b>${res.articles[i].publishedAt}</li>
                                 <li><b>Source: </b>${res.articles[i].source.name}</li>
-                                <p><b>Briefing: </b>${res.articles[i].description} <span><a href =${res.articles[i].url} target="_blank"><b id = "more">(more...)</b></span></p>
+                                <li><p id ="desc"><b>Briefing: </b>${res.articles[i].description} <span><a href =${res.articles[i].url} target="_blank"><b id = "more">(more...)</b></span></p><li>
                             </ul>  
+                            </div>
                 </div>`];
            
         console.log(article);
