@@ -109,8 +109,8 @@ module.exports = function (app) {
   app.get("/api/newsfeed", function (req, res) {
     newsapi.v2.everything({
       q: 'recycling',
-      sources: 'newsweek, time, the-huffington-post, bbc-news, cnn, the-new-york-times',
-      domains: 'newsweek.com, time.com, huffpost.com, www.bbc.com, cnn.com, nytimes.com',
+      sources: 'newsweek, time, the-huffington-post, bbc-news, cnn, the-new-york-times, usa-today, google-news, wired',
+      domains: 'newsweek.com, time.com, huffpost.com, www.bbc.com, cnn.com, nytimes.com, usatoday.com, news.google.com, wired.com',
       from: lastWeekString,
       to: todayString,
       language: 'en',
