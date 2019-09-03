@@ -77,6 +77,15 @@ ul {
     padding-top: 140px;
 }
 
+#newPost {
+    border:  solid 1px forestgreen;
+}
+
+#user {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 
 
 

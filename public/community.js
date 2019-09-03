@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-
 // postContainer holds all of Community posts
 const postContainer = $("#showPosts");
+const newPost = $("#newPost")
 
 // Variable to hold Community posts
 const posts = "";
@@ -22,14 +22,26 @@ function addPost(event) {
 }
 
 function submitPost(postInput) {
+
   $.post("/api/posts", postInput).then( function(postInput) {
-   
-    postContainer.append(`<p id='post'>${postInput.body}</p>`);
+  
     console.log(postInput)
+    createPost(postInput)
     
   })
+
 }
 
+function createPost(postInput) {
+  let formattedDate = new Date(postInput.createdAt);
+  formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm a");
+  postContainer.append(newPost);
+  newPost.append(`<p id='user'>${postInput.name}</p>`);
+  newPost.append(`<p id='post'>${postInput.body}</p>`);
+  newPost.append(`<p id='time'>${formattedDate}</p>`);
+ 
+  return createPost;
+}
 
 // function createRows(postInput) {
 //   postContainer.empty();

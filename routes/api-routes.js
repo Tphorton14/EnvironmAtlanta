@@ -36,7 +36,7 @@ module.exports = function(app) {
       console.log(user, "user")
       if (user){
         user.createPost({
-          name: user.id,
+          name: user.name,
           body: req.body.body,
         })
           .then(function(dbPost) {
