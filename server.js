@@ -23,48 +23,31 @@ require("./routes/html-routes.js")(app);
 require("./routes/user-api-routes.js")(app);
 
 passport.use(new LocalStrategy(
-  function (username, password, done) {
-    // return done(null, true);
-
-    User.findOne({
-      where: {
-        username: username
-      }
-    }).then(user => {
-      if (user) {
-        const valid = user.validatePassword(password);
-
-        if (valid) return done(null, user);
-
-        return done(null, false);
-      } else {
-        done(null, false);
-      }
-    })
-
-    // User.findOne({ username: username }, function (err, user) {
-    //   if (err) { return done(err); }
-    //   if (!user) {
-    //     return done(null, false, { message: 'Incorrect username.' });
-    //   }
-    //   if (!user.validPassword(password)) {
-    //     return done(null, false, { message: 'Incorrect password.' });
-    //   }
-    //   return done(null, user);
-    // });
+  function(username, password, done) {
+//     // User.findOne({ username: username }, function(err, user) {
+//     //   if (err) { return done(err); }
+//     //   if (!user) {
+//     //     return done(null, false, { message: 'Incorrect username.' });
+//     //   }
+//     //   if (!user.validPassword(password)) {
+//     //     return done(null, false, { message: 'Incorrect password.' });
+//     //   }
+//     //   return done(null, user);
+//     // });
   }
 ));
 
+// //Storing user to server 
 passport.serializeUser(function (user, done) {
   console.log(user);
   done(null, user);
 });
-
+// // Removing users to Server
 passport.deserializeUser(function (user, done) {
   done(null, user);
 });
 
-
+// //Session-Storage
 app.use(session({
   secret: 'FTNQNguUmcYTTrzWiFMr8lqFGKqaXgH1',
   resave: false,
@@ -96,7 +79,7 @@ app.post('/login',
   })
 );
 
-app.use('/api', api_routes);
+// app.use('/api', api_routes);
 
 // app.use('/', api_routes);
 
