@@ -62,13 +62,13 @@ module.exports = function (app) {
           });
       }
     })
-    // db.Post.create({
-    //   user: req.body.user,
-    //   body: req.body.body,
-    // })
-    //   .then(function(dbPost) {
-    //     res.json(dbPost);
-    //   });
+    db.Post.create({
+      user: req.body.user,
+      body: req.body.body,
+    })
+      .then(function (dbPost) {
+        res.json(dbPost);
+      });
   });
 
   // DELETE route for deleting posts (COMMUNITY PAGE)
