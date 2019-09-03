@@ -24,7 +24,7 @@ body {
     border-color:green;
     border-style: solid;
   }
-  header{
+  .welcome{
 
     background-color: darkgreen;
     color:white;
@@ -116,7 +116,7 @@ ul {
 .spacer
 {
     width: 100%;
-    height: 18vh;
+    height: 11%;
 }
 
 .blckBack {
