@@ -1,7 +1,7 @@
 {
   "name": "environmatlanta",
   "version": "1.0.0",
-  "description": "",
+  "description": "EnvironmAtlanta\r Team Members:\r Abbi DeLeve, Krithika Submaranian, Zach Scott, Taylor Horton, Chaitra Nagarajaiah\r Description:\r An application for users to find recycling locations near them, see environmental news in their area, be able to post their own updates and articles and interact with each other, and obtain information on environmental charities and organizations.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,7 +25,6 @@
     "google-news-rss": "^0.4.1",
     "mysql2": "^1.7.0",
     "newsapi": "^2.4.0",
-    "nodemon": "^1.19.1",
     "express-session": "^1.16.2",
     "faker": "^4.1.0",
     "passport": "^0.4.0",
@@ -33,8 +32,8 @@
     "sequelize": "^5.17.1",
     "sequelize-cli": "^5.5.0"
   },
-  "keywords": [] ,
+  "keywords": [],
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.2"
   }
 }
