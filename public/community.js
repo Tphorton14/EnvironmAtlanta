@@ -43,49 +43,37 @@ function createPost(postInput) {
   return createPost;
 }
 
-// function createRows(postInput) {
-//   postContainer.empty();
-//   // var postsToAdd = [];
-//   // for (var i = 0; i < posts.length; i++) {
-//   //   postsToAdd.push(createNewRow(posts[i]));
-//   // }
-//   postContainer.append(`<p>${postInput.body}</p>`);
+
+// // This function constructs a post's HTML
+// function createNewRow(postInput) {
+//   const formattedDate = new Date(postInput.createdAt);
+//   formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+//   const newPostCard = $("<div>");
+//   newPostCard.addClass("card");
+//   const deleteBtn = $("<button>");
+//   deleteBtn.text("x");
+//   deleteBtn.addClass("delete btn btn-danger");
+//   const newPostDate = $("<small>");
+//   const newPostCardBody = $("<div>");
+//   newPostCardBody.addClass("card-body");
+//   const newPostBody = $("<p>");
+//   newPostBody.text(post.body);
+//   newPostDate.text(formattedDate);;
+//   newPostCardHeading.append(deleteBtn);
+
+//   newPostCardBody.append(newPostBody);
+
+//   newPostCard.append(newPostCardBody);
+//   newPostCard.data("post", post);
+//   return newPostCard;
 // }
 
-// This function constructs a post's HTML
-function createNewRow(postInput) {
-  const formattedDate = new Date(postInput.createdAt);
-  formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
-  const newPostCard = $("<div>");
-  newPostCard.addClass("card");
-  const deleteBtn = $("<button>");
-  deleteBtn.text("x");
-  deleteBtn.addClass("delete btn btn-danger");
-  const newPostDate = $("<small>");
-  const newPostCardBody = $("<div>");
-  newPostCardBody.addClass("card-body");
-  const newPostBody = $("<p>");
-  newPostBody.text(post.body);
-  newPostDate.text(formattedDate);;
-  newPostCardHeading.append(deleteBtn);
 
-  newPostCardBody.append(newPostBody);
-
-  newPostCard.append(newPostCardBody);
-  newPostCard.data("post", post);
-  return newPostCard;
-}
-
-// $(document).on("click", "button.delete", handlePostDelete);
-// // This function figures out which post we want to delete and then calls deletePost
-// function handlePostDelete() {
-//   var currentPost = $(this)
-//     .parent()
-//     .parent()
-//     .data("post");
-//   deletePost(currentPost.id);
-// }
 
 
 });
+
+
+
+
 
