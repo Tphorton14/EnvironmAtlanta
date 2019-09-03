@@ -1,6 +1,25 @@
 var db = require("../models");
 var axios = require("axios");
 
+var NewsAPI = require('newsapi');
+    const newsapi = new NewsAPI('185145ab685d4df1bd29d79b88c3cc79');
+    var today = new Date();
+    var ddToday = String(today.getDate()).padStart(2, '0');
+    var mmToday = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyyToday = today.getFullYear();
+
+    today = yyyyToday + '-' + ddToday + '-' + mmToday;
+    var todayString = today.toDateString;
+    console.log(todayString);
+
+    var lastWeek = new Date();
+    var ddLastWeek = String(lastWeek.getDate()).padStart(2, '0');
+    var mmLastWeek = String(lastWeek.getMonth()).padStart(2, '0');
+    var yyyyLastWeek = lastWeek.getFullYear();
+    lastWeek = yyyyLastWeek; + '-' + ddLastWeek + '-' + mmLastWeek;
+    var lastWeekString = lastWeek.toDateString;
+    console.log(lastWeekString);
+
 // Routes
 // =============================================================
 module.exports = function (app) {
@@ -55,16 +74,20 @@ module.exports = function (app) {
       where: {
         userName: req.body.user
       }
-    }).then(function(user) {
-      if (user){
+    }).then(function (user) {
+      if (user) {
         db.Post.create({
           userId: user.id,
           body: req.body.body,
         })
-          .then(function(dbPost) {
+          .then(function (dbPost) {
             res.json(dbPost);
           });
       }
+    })
+    db.Post.create({
+      user: req.body.user,
+      body: req.body.body,
     })
       .then(function (dbPost) {
         res.json(dbPost);
@@ -82,6 +105,21 @@ module.exports = function (app) {
         res.json(dbPost);
       });
   });
+  
+  app.get("/api/newsfeed", function (req, res) {
+    newsapi.v2.everything({
+      q: 'recycling',
+      sources: 'newsweek, time, the-huffington-post, bbc-news, cnn, the-new-york-times',
+      domains: 'newsweek.com, time.com, huffpost.com, www.bbc.com, cnn.com, nytimes.com',
+      from: lastWeekString,
+      to: todayString,
+      language: 'en',
+      sortBy: 'date',
+      page: 2
+    }).then(response => {
+      console.log(response);
+      res.json(response);
+    })
+  })
+}
 
-
-};
