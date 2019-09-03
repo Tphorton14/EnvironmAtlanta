@@ -5,107 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
 
     <title>User Dashboard</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
-    integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
-    
+        integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <meta name="844376803060-cn4u67sogva3l0n4hkntkcjpima8lgjr.apps.googleusercontent.com" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="844376803060-cn4u67sogva3l0n4hkntkcjpima8lgjr.apps.googleusercontent.com"
+        content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 
-<!--Google Sign-In-->
-        <meta name="google-signin-scope" content="profile email">
-        <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <link rel="stylesheet" href="./style/style.css" type="text/css">
+    <!--Google Sign-In-->
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
 </head>
 
 <body>
-        <header>
-                <div class="mainBack">
-                    <div class="mainNav">
-                        <nav class="navbar navbar-expand-lg" class="text-center">
-                            <a class="navbar-brand box" href="#"><i class="fas fa-recycle">EnvironmAtlanta</i></a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-        
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item active">
-                                        <a class="nav-link color" href="#">Home <span class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link color" href="#">Recycle Near Me</a>
-                                    </li>
-                                    <li class="nav-item">
-                                            <a class="nav-link color" href="#">Charities</a>
-                                        </li>
-                                        <li class="nav-item">
-                                                <a class="nav-link color" href="#">Current News</a>
-                                            </li>
-                                        <li class="nav-item">
-                                                <a class="nav-link color" href="#">Community</a>
-                                            </li>
-                                    
-                                </ul>
-                                <form class="form-inline my-2 my-lg-0">
-                                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                    <button class="btn btn-outline-success my-2 my-sm-0 color" type="submit">Search</button>
-                                </form>
-        
-        
-        
-                            </div>
+    <header>
+        <div class="mainBack">
+            <div class="mainNav">
+                <nav class="navbar navbar-expand-lg" class="text-center">
+                    <a class="navbar-brand box" href="#"><i class="fas fa-recycle">EnvironmAtlanta</i></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link color" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="#">Recycle Near Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="#">Charities</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="#">Current News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="#">Community</a>
+                            </li>
+
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0 color" type="submit">Search</button>
+                        </form>
                     </div>
-                    </nav>
-                    <div>
-        
-                        <div class="nav navbar-nav userNav_nav">
-                            <ul class="userNav_list">
-                                <li class="userNav_item">
-                                
-                                <li class="userNav_item">
-                                    <a class="userNav_link" href="/en-US/account/sign_up">Sign up</a>
-                                </li>
-                                
-                                <li class="userNav_item">
-                                    <a class="userNav_link" href="/en-US/account/sign_in">Sign in</a>
-                                </li>
-                            </ul>
-                        </div>
-        
-                    </div>
-            </header>
+            </div>
+            </nav>
+            <div>
+
+                <div class="nav navbar-nav userNav_nav">
+                    <ul class="userNav_list">
+                        <li class="userNav_item">
+
+                        <li class="userNav_item">
+                            <a class="userNav_link" href="./user-page.html">Sign up</a>
+                        </li>
+
+                        <li class="userNav_item">
+                            <a class="userNav_link" href="/en-US/account/sign_in">Sign in</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+    </header>
     <div class="conatiner">
         <div class="row">
             <div class="col">
-                <form>
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Name</label>
+                        <input type="text" class="form-control" id="exampleInputName" placeholder="Password">
+                    </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        <input type="email" class="form-control" id="username" aria-describedby="emailHelp"
                             placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control" id="password" placeholder="Password">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Phone Number</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1"
-                            placeholder="Phone Number">
+                        <input type="password" class="form-control" id="phonenumber" placeholder="Phone Number">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">City</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="City">
+                        <input type="password" class="form-control" id="cityname" placeholder="City">
                     </div>
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -113,28 +112,30 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
 
-                    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+                    <!-- <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div> -->
                 </form>
             </div>
         </div>
     </div>
 </body>
 
-<script>
-        function onSignIn(googleUser) {
-          // Useful data for your client-side scripts:
-          var profile = googleUser.getBasicProfile();
-          console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-          console.log('Full Name: ' + profile.getName());
-          console.log('Given Name: ' + profile.getGivenName());
-          console.log('Family Name: ' + profile.getFamilyName());
-          console.log("Image URL: " + profile.getImageUrl());
-          console.log("Email: " + profile.getEmail());
-  
-          // The ID token you need to pass to your backend:
-          var id_token = googleUser.getAuthResponse().id_token;
-          console.log("ID Token: " + id_token);
-        }
-      </script>
+<!-- <script>
+    function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+    }
+</script> -->
+
+
 
 </html>

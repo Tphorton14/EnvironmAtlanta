@@ -13,10 +13,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
 
-<body class="back">
+<body class="indexBack">
 
     
 
@@ -34,19 +37,19 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link color" href="#">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link color" href="/">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link color" href="#">Recycle Near Me</a>
+                                <a class="nav-link color" href="/recycleNearYou">Recycle Near Me</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link color" href="#">Charities</a>
+                                <a class="nav-link color" href="/charity">Charities</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link color" href="#">Current News</a>
+                                <a class="nav-link color" href="/newsFeed">Current News</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link color" href="#">Community</a>
+                                <a class="nav-link color" href="/community">Community</a>
                             </li>
 
                         </ul>
@@ -61,9 +64,9 @@
                 <div class="nav navbar-nav userNav_nav">
                     <ul class="userNav_list">
 
-                        <li class="userNav_item">
-                            <a class="userNav_link" href="/en-US/account/sign_up"> <i class="fas">Sign up</i></a>
-                        </li>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                               SignUp
+                              </button>
 
                         <li class="userNav_item">
                             <a class="userNav_link" href="/en-US/account/sign_in"><i class="fas fa-sign-in-alt"> Sign in</i></a>
@@ -73,12 +76,47 @@
 
             </div>
     </header>
-
-    
-
-    <main>
-
-    </main>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Signup</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+            <label for="exampleInputPassword1">Name</label>
+            <input type="text" class="form-control" id="exampleInputName" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="username" aria-describedby="emailHelp"
+                placeholder="Enter email">
+        </div>
+        <div class="form-group">    
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Phone Number</label>
+            <input type="password" class="form-control" id="phonenumber" placeholder="Phone Number">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">City</label>
+            <input type="password" class="form-control" id="cityname" placeholder="City">
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
