@@ -73,7 +73,9 @@ ul {
     background: rgba(255, 255, 255, 0);
     
 }
-
+.container {
+    padding-top: 140px;
+}
 
 
 
