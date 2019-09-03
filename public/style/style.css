@@ -11,6 +11,33 @@
     background-blend-mode: multiply;
 }
 
+body {
+    background-image: url("../images/grass.png");
+     background-image: url("https://image.shutterstock.com/image-photo/lush-spring-green-grass-background-260nw-1409508311.jpg");
+     background-size:cover;
+     background-repeat: no-repeat;
+     height: 100vh;
+ }
+
+ #location{
+    border:1px;
+    border-color:green;
+    border-style: solid;
+  }
+  header{
+
+    background-color: darkgreen;
+    color:white;
+  } 
+.back {
+    position: relative;
+    background: url("https://s.hdnux.com/photos/75/10/13/16024311/4/rawImage.jpg") #414143;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    background-blend-mode: multiply;
+}
+
 .communityBack {
     position: relative;
     background: url("https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80") #414143;
@@ -25,6 +52,7 @@
 .recycle{
     text-align: center;
     
+
 }
 
 .box {
@@ -85,15 +113,110 @@ ul {
     
 }
 
+.spacer
+{
+    width: 100%;
+    height: 18vh;
+}
+
+.blckBack {
+    background: black;
+}
+#newsFeedList {
+    padding-left: 0;
+    display: inline;
+}
+.container-fluid {
+    margin: 15px;
+    width: auto;
+    
+}
+#json {
+    flex: auto;
+}
+
+h4 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    text-align: center;
+    color: #f984ef;
+}
+
+
+.newsFeedBody {
+    background: black;
+    width: 100%;
+}
+
+#newsArticleTron {
+    padding: 15px;
+    margin: 3px;
+    background: #282828;
+    color: lightgray;
+    border: solid 3px lightgray;
+}
+
+#newsFeedImage {
+    clear: right;
+    margin-top: 10px;
+}
+#nfImg {
+    float: left;
+    height: auto;
+    width: 25%;
+    margin: 20px;
+    align-content: center;
+}
+
+#newsFeedAbout {
+    float: right;
+    padding-top: 0;
+    justify-content: initial;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    vertical-align: top;
+    font-size: 16px;
+    padding: 5px;
+}
+
+ul li {
+    list-style-type: none;
+    }
+
+.middle {
+    overflow: auto;
+    align-content: center;
+}
+
+b {
+    color: steelblue;
+    font-style: italic;
+}
+
+#more {
+    color: goldenrod;
+}
+
+
+
+#recyling-news-feed {
+    padding: 0;
+}
+
+a:active {
+    color: brown;
+}
+
+.container-fluid {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#desc {
+    overflow: auto;
+}
 
 
 
 
 
 
-
-
-
-
-
-@media (min-width: 1200px);
