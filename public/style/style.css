@@ -21,8 +21,6 @@ body{
     background-color: darkgreen;
     color:white;
   }
-  
-
 .back {
     position: relative;
     background: url("https://s.hdnux.com/photos/75/10/13/16024311/4/rawImage.jpg") #414143;
@@ -95,5 +93,111 @@ ul {
     background: rgba(255, 255, 255, 0);
     
 }
+
+.spacer
+{
+    width: 100%;
+    height: 11%;
+}
+
+.blckBack {
+    background: black;
+}
+#newsFeedList {
+    padding-left: 0;
+    display: inline;
+}
+.container-fluid {
+    margin: 15px;
+    width: auto;
+    
+}
+#json {
+    flex: auto;
+}
+
+h4 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    text-align: center;
+    color: #f984ef;
+}
+
+
+.newsFeedBody {
+    background: black;
+    width: 100%;
+}
+
+#newsArticleTron {
+    padding: 15px;
+    margin: 3px;
+    background: #282828;
+    color: lightgray;
+    border: solid 3px lightgray;
+}
+
+#newsFeedImage {
+    clear: right;
+    margin-top: 10px;
+}
+#nfImg {
+    float: left;
+    height: auto;
+    width: 25%;
+    margin: 20px;
+    align-content: center;
+}
+
+#newsFeedAbout {
+    float: right;
+    padding-top: 0;
+    justify-content: initial;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    vertical-align: top;
+    font-size: 16px;
+    padding: 5px;
+}
+
+ul li {
+    list-style-type: none;
+    }
+
+.middle {
+    overflow: auto;
+    align-content: center;
+}
+
+b {
+    color: steelblue;
+    font-style: italic;
+}
+
+#more {
+    color: goldenrod;
+}
+
+
+
+#recyling-news-feed {
+    padding: 0;
+}
+
+a:active {
+    color: brown;
+}
+
+.container-fluid {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#desc {
+    overflow: auto;
+}
+
+
+
+
 
 

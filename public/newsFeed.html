@@ -6,16 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Recycling News Feed</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
         integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="/style/style.css" type="text/css">
-
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class ="blckBack">
     <header>
         <div class="mainBack">
             <div class="mainNav">
@@ -55,10 +63,9 @@
 
                     </div>
             </div>
-            </nav>
             <div>
 
-                <div class="nav navbar-nav userNav_nav">
+                <!-- <div class="nav navbar-nav userNav_nav" id = "signIn">
                     <ul class="userNav_list">
                         <li class="userNav_item">
 
@@ -72,58 +79,62 @@
                     </ul>
                 </div>
 
+            </div> -->
             </div>
+        </nav>
     </header>
+    <div class="spacer">
+        &nbsp;
+    </div>
+<div class = "container-fluid">
+        <div class="recycling-news-ticker" id="json">
+            <div class="recycling-news">
+                <ul id = "newsFeedList">
+                    <li class = "recyling-news-feed"></li>
+                </ul>
+            </div>
+            <div class="bn-controls">
+                <button><span class="bn-arrow bn-prev"></span></button>
+                <button><span class="bn-action"></span></button>
+                <button><span class="bn-arrow bn-next"></span></button>
+            </div>
+        </div>
+    </div>
+<script>
+    $(document).ready(function () {
+   $.get("api/newsfeed").then(
+       function(response) {
+           console.log(response);
+           let res = response;
+           let articles = [];
+           for(let i = 0; i < res.articles.length; i++) {
+           article = [`<div class = "jumbotron jumbotron-fluid" id= "newsArticleTron">
+                        <h4 id = "articleTitle">${res.articles[i].title}</h4>
+                            </header> 
+                        <div class="middle">
+                        <img src="${res.articles[i].urlToImage}" alt = "image" id="nfImg">
+                            <ul id ="newsFeedAbout>  
+                                <li id = "author"><b>Author: </b>${res.articles[i].author}</li> 
+                                <li id ="date"><b>Date: </b>${res.articles[i].publishedAt}</li>
+                                <li><b>Source: </b>${res.articles[i].source.name}</li>
+                                <li><p id ="desc"><b>Briefing: </b>${res.articles[i].description} <span><a href =${res.articles[i].url} target="_blank"><b id = "more">(more...)</b></span></p><li>
+                            </ul>  
+                            </div>
+                </div>`];
+           
+        console.log(article);
+        $(".recyling-news-feed").append(article);
+           }
+           });
+        
+       }
+   );
+        
+    // });
 
-    <h1>Recycling and Environmental Awareness News</h1>
-    <th scope="row"></th>
+
+</script>
 </body>
 
 </html>
-<!-- 
-<script>
-    const NewsAPI = require('newsapi');
-    const newsapi = new NewsAPI('newsFeedAPi');
 
-    var today = new Date();
-    var ddToday = String(today.getDate()).padStart(2, '0');
-    var mmToday = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyyToday = today.getFullYear();
-
-    today = yyyyToday + '/' + ddToday + '/' + mmToday;
-    console.log(today);
-
-    var lastWeek = new Date();
-    var ddLastWeek = String(lastWeek.getDate() - 7).padStart(2, '0');
-    var mmLastWeek = String(lastWeek.getMonth() + 1).padStart(2, '0');
-    var yyyyLastWeek = lastWeek.getFullYear();
-    lastWeek = yyyyLastWeek; + '-' + ddLastWeek + '-' + mmLastWeek;
-    console.log(lastWeek);
-
-
-    // To query /v2/everything
-    // You must include at least one q, source, or domain
-    newsapi.v2.everything({
-        q: 'recycling, Atlanta, environment, green',
-        sources: 'treehugger,grist, national geographic, huffpost, greepeace',
-        domains: 'treehugger.com, grist.org, nationalgeographic.com/environment/, huffpost.com/impact/green/, greenpeace.org/usa/',
-        from: 'lastWeek',
-        to: 'today',
-        language: 'en',
-        sortBy: 'date',
-        page: 2
-    }).then(response => {
-        let newsArticlesArray = [];
-
-        console.log(response);
-        var article = {
-            `<th scope="row">'{ response.title } + '</th>',
-            '<th scope="row">'+ { response.description } + '</th>',
-            '<th scope="row">'+ { response.url } + '</th>',
-            '<th scope="row">'+ { response.publishedAt } + '</th>',
-            '<th scope="row">'+ { response.content } + '</th>';
-        }
-
-        newsArticlesArray.push(article);
-    });
-</script> -->
