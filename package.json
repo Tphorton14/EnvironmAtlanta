@@ -1,7 +1,7 @@
 {
   "name": "environmatlanta",
   "version": "1.0.0",
-  "description": "",
+  "description": "EnvironmAtlanta Team Members: Abbi DeLeve, Krithika Submaranian, Zach Scott, Taylor Horton, Chaitra Nagarajaiah Description: An application for users to find recycling locations near them, see environmental news in their area, be able to post their own updates and articles and interact with each other, and obtain information on environmental charities and organizations.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
