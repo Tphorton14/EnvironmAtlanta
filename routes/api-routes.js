@@ -65,7 +65,7 @@ module.exports = function (app) {
 
   // GET route for getting all of the posts (COMMUNITY PAGE)
   app.get("/api/posts/", function (req, res) {
-    db.Post.findAll()
+    db.Post.findAll({ limit: 10, order: [['updatedAt', 'DESC']]})
       .then(function (dbPost) {
         res.json(dbPost);
       });
@@ -126,14 +126,14 @@ module.exports = function (app) {
 
   app.get("/api/newsfeed", function (req, res) {
     newsapi.v2.everything({
-      q: 'recycling',
-      sources: 'newsweek, time, the-huffington-post, bbc-news, cnn, the-new-york-times',
-      domains: 'newsweek.com, time.com, huffpost.com, www.bbc.com, cnn.com, nytimes.com',
+      q: 'recycle',
+      sources: 'reddit-r-all, newsweek, the-huffington-post, wired, associated-press, cbs-news, national-geographic, new-scientist',
+      domains: 'reddit.com, newsweek.com, huffpost.com, wired.com, apnews.com, cbsnews.com, nationalgeographic.com, newscientist.com',
       from: lastWeekString,
       to: todayString,
       language: 'en',
-      sortBy: 'date',
-      page: 2
+      sortBy: 'relevancy',
+      page: 1
     }).then(response => {
       console.log(response);
       res.json(response);
