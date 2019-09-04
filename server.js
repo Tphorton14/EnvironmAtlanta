@@ -105,26 +105,3 @@ sequelize.sync({force: false})
 
 module.exports = app;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // app.get('/login', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
-
-    // app.get('/auth/google/callback',
-    //   passport.authenticate('google', { failureRedirect: '/login' }),
-    //   function (req, res) {
-    //     console.log(req.user.displayName);
-    //     res.redirect('/');
-    //   });
-// })

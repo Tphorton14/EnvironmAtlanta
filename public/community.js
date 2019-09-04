@@ -1,11 +1,9 @@
 $(document).ready(function() {
 
-// postContainer holds all of Community posts
+//holds all of Community posts
 const postContainer = $("#showPosts");
 const newPost = $("#newPost")
 
-// Variable to hold Community posts
-const posts = "";
 
 
 $("#communityPost").on("submit", addPost)
@@ -23,50 +21,37 @@ function addPost(event) {
 
 function submitPost(postInput) {
 
-  $.post("/api/posts", postInput).then( function(postInput) {
+  $.post("/api/posts", postInput)
+    .then( function(res) {
+      $.get('/api/posts')
+      .then(function(allPosts) {
+        console.log(allPosts)
+        createPost(allPosts)
+      })
   
-    console.log(postInput)
-    createPost(postInput)
+    // console.log(postInput)
+    // createPost(postInput)
     
   })
 
 }
 
-function createPost(postInput) {
-  let formattedDate = new Date(postInput.createdAt);
+function createPost(allPosts) {
+ allPosts.forEach(postInput => {
+     let formattedDate = new Date(postInput.createdAt);
   formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm a");
   postContainer.append(newPost);
   newPost.append(`<p id='user'>${postInput.name}</p>`);
   newPost.append(`<p id='post'>${postInput.body}</p>`);
   newPost.append(`<p id='time'>${formattedDate}</p>`);
- 
-  return createPost;
-}
+  console.log(user);
+  console.log(post);
+ })
+};
 
 
-// // This function constructs a post's HTML
-// function createNewRow(postInput) {
-//   const formattedDate = new Date(postInput.createdAt);
-//   formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
-//   const newPostCard = $("<div>");
-//   newPostCard.addClass("card");
-//   const deleteBtn = $("<button>");
-//   deleteBtn.text("x");
-//   deleteBtn.addClass("delete btn btn-danger");
-//   const newPostDate = $("<small>");
-//   const newPostCardBody = $("<div>");
-//   newPostCardBody.addClass("card-body");
-//   const newPostBody = $("<p>");
-//   newPostBody.text(post.body);
-//   newPostDate.text(formattedDate);;
-//   newPostCardHeading.append(deleteBtn);
 
-//   newPostCardBody.append(newPostBody);
 
-//   newPostCard.append(newPostCardBody);
-//   newPostCard.data("post", post);
-//   return newPostCard;
-// }
 
 
 
