@@ -100,31 +100,8 @@ app.use('/api', api_routes);
 
 // app.use('/', api_routes);
 
-sequelize.sync()
+sequelize.sync({force: false})
   .then(() => app.listen(PORT, () => console.log('Listening on port %s', PORT)));
 
 module.exports = app;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // app.get('/login', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
-
-    // app.get('/auth/google/callback',
-    //   passport.authenticate('google', { failureRedirect: '/login' }),
-    //   function (req, res) {
-    //     console.log(req.user.displayName);
-    //     res.redirect('/');
-    //   });
-// })
