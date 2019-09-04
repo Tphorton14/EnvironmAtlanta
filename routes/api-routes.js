@@ -9,7 +9,7 @@ var NewsAPI = require('newsapi');
     var yyyyToday = today.getFullYear();
 
     today = yyyyToday + '-' + ddToday + '-' + mmToday;
-    var todayString = today.toDateString;
+    const todayString = today.toDateString;
     console.log(todayString);
 
     var lastWeek = new Date();
@@ -17,7 +17,7 @@ var NewsAPI = require('newsapi');
     var mmLastWeek = String(lastWeek.getMonth()).padStart(2, '0');
     var yyyyLastWeek = lastWeek.getFullYear();
     lastWeek = yyyyLastWeek; + '-' + ddLastWeek + '-' + mmLastWeek;
-    var lastWeekString = lastWeek.toDateString;
+    const lastWeekString = lastWeek.toDateString;
     console.log(lastWeekString);
 
 // Routes
@@ -108,14 +108,14 @@ module.exports = function (app) {
   
   app.get("/api/newsfeed", function (req, res) {
     newsapi.v2.everything({
-      q: 'recycling',
-      sources: 'newsweek, time, the-huffington-post, bbc-news, cnn, the-new-york-times, usa-today, google-news, wired',
-      domains: 'newsweek.com, time.com, huffpost.com, www.bbc.com, cnn.com, nytimes.com, usatoday.com, news.google.com, wired.com',
+      q: 'recycle',
+      sources: 'reddit-r-all, newsweek, the-huffington-post, wired, associated-press, cbs-news, national-geographic, new-scientist',
+      domains: 'reddit.com, newsweek.com, huffpost.com, wired.com, apnews.com, cbsnews.com, nationalgeographic.com, newscientist.com',
       from: lastWeekString,
       to: todayString,
       language: 'en',
-      sortBy: 'date',
-      page: 2
+      sortBy: 'relevancy',
+      page: 1
     }).then(response => {
       console.log(response);
       res.json(response);

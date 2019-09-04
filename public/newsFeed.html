@@ -19,6 +19,7 @@
         crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
     <link rel="stylesheet" href="./style/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
@@ -107,7 +108,9 @@
            console.log(response);
            let res = response;
            let articles = [];
-           for(let i = 0; i < res.articles.length; i++) {
+           for(let i = 0; i < res.articles.length -1; i++) {
+        //     let formattedDate = $(res.articles[i].publishedAt);
+        //    formattedDate = moment(formattedDate).format("MMMM Do, YYYY");
            article = [`<div class = "jumbotron jumbotron-fluid" id= "newsArticleTron">
                         <h4 id = "articleTitle">${res.articles[i].title}</h4>
                             </header> 
@@ -115,7 +118,7 @@
                         <img src="${res.articles[i].urlToImage}" alt = "image" id="nfImg">
                             <ul id ="newsFeedAbout>  
                                 <li id = "author"><b>Author: </b>${res.articles[i].author}</li> 
-                                <li id ="date"><b>Date: </b>${res.articles[i].publishedAt}</li>
+                                <li id ="date"><b>Date: </b>${moment(res.articles[i].publishedAt).format("MMMM Do, YYYY")}</li>
                                 <li><b>Source: </b>${res.articles[i].source.name}</li>
                                 <li><p id ="desc"><b>Briefing: </b>${res.articles[i].description} <span><a href =${res.articles[i].url} target="_blank"><b id = "more">(more...)</b></span></p><li>
                             </ul>  
