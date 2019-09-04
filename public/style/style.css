@@ -111,12 +111,20 @@ ul {
     position: fixed;
 }
 
-.mainNav {
+.mainNav
+ {
     width: 1300px;
     margin: 0 auto;
     padding: 0px 40px 0px 40px;
     background: rgba(255, 255, 255, 0);
     
+}
+
+#mainJumbo{
+    width: 950px;
+    margin: 25% 0px 0px 20%;
+    padding: 0px 40px 0px 40px;
+    clear: all;
 }
 .container {
     padding-top: 140px;
@@ -232,12 +240,64 @@ a:active {
     overflow: auto;
 }
 
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .content {
+    min-height: 100%;
+  }
+  .content-inside {
+    padding: 20px;
+    padding-bottom: 50px;
+  }
+  .footer {
+    height: 100px;
+    margin-top: -10px;
+    background: #3c3c3c;
+    box-shadow: 2px 0px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(180, 180, 180, 0.904);
+  }
 #welcomeUser {
     color: Blue;
 }
 
 
+  .parallax {
+      position: absolute;
+      top: 200px;
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .parallax__layer--base {
+    transform: translateZ(0);
+  }
+  .parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+  }
 
+  @media only screen and (max-width: 980px) {
+	.mainNav {
+		width: 70%;
+	}
+}
 
-
-
+@media only screen and (max-width: 768px) {
+	.main {
+		width: 90%;
+	}
+}

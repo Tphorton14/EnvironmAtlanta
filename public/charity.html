@@ -9,10 +9,17 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
         integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style/style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
 
 </head>
 
@@ -67,7 +74,7 @@
                     </ul>
                 </div>
 
-            </div>
+                </div>
     </header>
 
     <main>
@@ -81,16 +88,47 @@
     </main>
 
 
-    <footer>
-        <!-- <div class="bottom">
-            <nav class="navbar navbar-light bg-light">
-                    <a class="navbar-brand" href="#">
-                      <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-                    </a>
-                  </nav>
+    <div class="content">
+        <div class="content-inside">
+            content
+        </div>
+    </div>
+    <footer class="footer"></footer>
 
-                  </div> -->
-    </footer>
+
+    <script>
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 0) {
+                $('#myDropDown').fadeOut();
+            } else {
+                $('#myDropDown').fadeIn();
+            }
+        });
+
+
+
+
+//        function myFunction() {
+//   document.getElementById("myDropdown").classList.toggle("show")
+// };
+
+// // Close the dropdown menu if the user clicks outside of it
+// window.onclick = function(event) {
+//   if (!event.target.matches('.dropBtn')) {
+//     var dropdowns = document.getElementsByClassName("dropdown-content");
+//     var i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//       var openDropdown = dropdowns[i];
+//       if (openDropdown.classList.contains('show')) {
+//         openDropdown.classList.remove('show');
+//       }
+//     }
+//   }
+// };
+
+
+    </script>
 
 </body>
 
