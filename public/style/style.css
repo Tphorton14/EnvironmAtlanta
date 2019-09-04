@@ -263,6 +263,10 @@ a:active {
     background: #3c3c3c;
     box-shadow: 2px 0px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(180, 180, 180, 0.904);
   }
+#welcomeUser {
+    color: Blue;
+}
+
 
   .parallax {
       position: absolute;
