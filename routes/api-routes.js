@@ -77,9 +77,9 @@ module.exports = function (app) {
       where: {
         name: req.body.user
       }
-    }).then(function(user) {
+    }).then(function (user) {
       console.log(user, "user")
-      if (user){
+      if (user) {
         user.createPost({
           name: user.name,
           body: req.body.body,
@@ -125,5 +125,18 @@ module.exports = function (app) {
       res.json(response);
     })
   })
+  app.get("/api/charity", function (req, res) {
+    const request = require('request');
+    const options = {
+      url: 'https://api.cloverly.com/2019-03-beta/offset-types',
+      headers: {
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer private_key:04f5ecbb6e520f3e'
+      }
+    };
+    request(options, function (error, response, body) {
+      console.log(body);
+    });
+  });
 }
 
