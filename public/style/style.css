@@ -161,10 +161,12 @@ ul {
 }
 
 h4 {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 30px;
-    text-align: center;
-    color: #f984ef;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 32px;
+    color: lightseagreen;
+    font-style: bold;
+    padding-left: 20px;
+    padding-bottom: 0;
 }
 
 
@@ -183,7 +185,7 @@ h4 {
 
 #newsFeedImage {
     clear: right;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 #nfImg {
     float: left;
@@ -199,8 +201,6 @@ h4 {
     justify-content: initial;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     vertical-align: top;
-    font-size: 16px;
-    padding: 5px;
 }
 
 ul li {

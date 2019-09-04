@@ -1,12 +1,17 @@
 {
   "name": "EnvironmAtlanta",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "EnvironmAtlanta\r Team Members:\r Abbi DeLeve, Krithika Submaranian, Zach Scott, Taylor Horton, Chaitra Nagarajaiah\r Description:\r An application for users to find recycling locations near them, see environmental news in their area, be able to post their own updates and articles and interact with each other, and obtain information on environmental charities and organizations.",
   "main": "news_api_config.js",
   "dependencies": {
     "nodemon": "^1.19.2"
   },
   "devDependencies": {},
+=======
+  "description": "EnvironmAtlanta Team Members: Abbi DeLeve, Krithika Submaranian, Zach Scott, Taylor Horton, Chaitra Nagarajaiah Description: An application for users to find recycling locations near them, see environmental news in their area, be able to post their own updates and articles and interact with each other, and obtain information on environmental charities and organizations.",
+  "main": "server.js",
+>>>>>>> ff6544f4711898f42f28d21ce1419c54b16f2cae
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
