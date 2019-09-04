@@ -31,5 +31,15 @@ module.exports = function (sequelize, DataTypes) {
         //     defaultValue: 30328
         // }
     });
+
+     
+    User.associate = function(models) {
+        this.hasMany(models.Post, {
+         
+
+        })
+  
+      }
+
     return User;
 };

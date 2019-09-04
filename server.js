@@ -8,8 +8,6 @@ const db= require("./models");
 //const LocalStrategy = require('passport-local').Strategy;
 const api_routes = require('./routes/api-routes');
 
-
-
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
