@@ -11,7 +11,7 @@
     background-blend-mode: multiply;
 }
 
-body {
+.nearYouBack {
     background-image: url("../images/grass.png");
      background-size:cover;
      background-repeat: no-repeat;
@@ -92,18 +92,8 @@ ul {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
-.userNav_item {
-    font-size: 10px;
-    font-size: 1rem;
-    display: inline-block;
-    padding: 5px;
-    text-transform: uppercase;
-    list-style: none;
-    border-left: 1px solid #dadada;
-    text-align: center;
-}
 
-.mainBack {
+header {
     width: 100%;
     background: #00b944;
     z-index: 103;
