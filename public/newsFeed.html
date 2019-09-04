@@ -87,9 +87,9 @@
     <div class="spacer">
         &nbsp;
     </div>
-<div class = "container-fluid">
+<div class="container-fluid">
         <div class="recycling-news-ticker" id="json">
-            <div class="recycling-news">
+            <div class="recycling-news" id="newsFeed">
                 <ul id = "newsFeedList">
                     <li class = "recyling-news-feed"></li>
                 </ul>
@@ -101,6 +101,13 @@
             </div>
         </div>
     </div>
+
+    <div class="content">
+            <div class="content-inside">
+              content
+            </div>
+          </div>
+          <footer class="footer"></footer>
 <script>
     $(document).ready(function () {
    $.get("api/newsfeed").then(
@@ -138,6 +145,14 @@
     $('#myDropDown').fadeIn();
   }
 });
+
+// $(window).scroll(function() {
+//   if ($(this).scrollTop() > 0) {
+//     $('#newsFeed').fadeIn();
+//   } else {
+//     $('#newsFeed').fadeOut();
+//   }
+// });
         
     // });
 
