@@ -264,9 +264,9 @@ a:active {
     box-shadow: 2px 0px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(180, 180, 180, 0.904);
   }
 
-
-
   .parallax {
+      position: absolute;
+      top: 200px;
   perspective: 1px;
   height: 100vh;
   overflow-x: hidden;
