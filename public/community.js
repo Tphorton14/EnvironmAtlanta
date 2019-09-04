@@ -44,8 +44,7 @@ function createPost(allPosts) {
   newPost.append(`<p id='user'>${postInput.name}</p>`);
   newPost.append(`<p id='post'>${postInput.body}</p>`);
   newPost.append(`<p id='time'>${formattedDate}</p>`);
-  console.log(user);
-  console.log(post);
+ 
  })
 };
 
