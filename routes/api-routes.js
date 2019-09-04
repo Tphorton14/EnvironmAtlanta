@@ -19,11 +19,25 @@ var yyyyLastWeek = lastWeek.getFullYear();
 lastWeek = yyyyLastWeek; + '-' + ddLastWeek + '-' + mmLastWeek;
 var lastWeekString = lastWeek.toDateString;
 console.log(lastWeekString);
+const passport = require('passport');
+const session = require('express-session');
 
 // Routes
 // =============================================================
 module.exports = function (app) {
 
+  
+  // app.get('/api/current-user', function(req, res) {
+  //   console.log('api/current-user');
+  //   console.log(session);
+  //   res.json(req.user);
+  //   // res.json('current');
+  // })
+
+  app.get('/api/current-user', function (req, res) {
+      res.send(req.user)
+    }
+  );
 
   app.post("/api/earth911", function (req, res) {
     const { city, zip } = req.body

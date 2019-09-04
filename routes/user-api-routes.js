@@ -47,6 +47,8 @@ module.exports = function (app) {
     app.get('/auth/google/callback',
         passport.authenticate('google', { failureRedirect: '/login' }),
         function (req, res) {
+            console.log('req.user', req.user[0].dataValues.name);
+            res.cookie("user", req.user[0].dataValues.name);
             res.redirect('/');
         });
 
@@ -71,25 +73,27 @@ module.exports = function (app) {
                 // }
             }).then(user => {
                 console.log(user)
-                return done(null,user);
-               // return profile.displayName;
+                return done(null, user);
+                // return profile.displayName;
             });
         }
     ));
 
-    //Google Sign-In
-    app.get('/auth/google',
-        passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login']}));
+    // //Google Sign-In
+    // app.get('/auth/google',
+    //     passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login']}));
 
-    app.get('/auth/google/callback',
-        passport.authenticate('google', { failureRedirect: '/login' }),
-        function (req, res) {
-            res.redirect('/');
-        });
+    // app.get('/auth/google/callback',
+    //     passport.authenticate('google', { failureRedirect: '/login' }),
+    //     function (req, res) {
+    //         console.log(req.user[0].dataValues.name);
+    //         res.redirect('/');
+    //     });
 
     //Log-out
-    app.get('/logout', function(req, res){
+    app.get('/logout', function (req, res) {
         req.logout();
+        res.cookie('user');
         res.redirect('/');
-      });
+    });
 }
