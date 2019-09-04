@@ -26,7 +26,7 @@ const session = require('express-session');
 // =============================================================
 module.exports = function (app) {
 
-  
+
   // app.get('/api/current-user', function(req, res) {
   //   console.log('api/current-user');
   //   console.log(session);
@@ -35,14 +35,14 @@ module.exports = function (app) {
   // })
 
   app.get('/api/current-user', function (req, res) {
-      res.send(req.user)
-    }
+    res.send(req.user)
+  }
   );
 
   app.post("/api/earth911", function (req, res) {
     const { city, zip } = req.body
-    const apiKey = "eb8ae1e5f2bbf847";
-    const googleApiKey = 'AIzaSyCP3IsvfAnbbGkV3UMS_LfA06n4hulTel0'
+    const apiKey = process.env.apiKey;
+    const googleApiKey = process.env.googleApiKey;
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city},+${zip}&key=${googleApiKey}`
     // const url = `http://api.earth911.com/earth911.getPostalData?country=US&postal_code=${zip}&city=${city}&api_key=${apiKey}`
     axios.get(url).then(response => {
@@ -65,7 +65,7 @@ module.exports = function (app) {
 
   // GET route for getting all of the posts (COMMUNITY PAGE)
   app.get("/api/posts/", function (req, res) {
-    db.Post.findAll({ limit: 10, order: [['updatedAt', 'DESC']]})
+    db.Post.findAll({ limit: 10, order: [['updatedAt', 'DESC']] })
       .then(function (dbPost) {
         res.json(dbPost);
       });
@@ -91,9 +91,9 @@ module.exports = function (app) {
       where: {
         name: req.body.user
       }
-    }).then(function(user) {
+    }).then(function (user) {
       console.log(user, "user")
-      if (user){
+      if (user) {
         user.createPost({
           name: user.name,
           body: req.body.body,
