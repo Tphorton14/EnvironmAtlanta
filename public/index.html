@@ -22,13 +22,13 @@
     <link rel="stylesheet" href="./style/style.css" type="text/css">
 </head>
 
-<body class="indexBack">
+<body class="indexBack paralax">
 
 
 
     <header>
-        <div class="mainBack">
-            <div class="mainNav">
+        <div class="mainBack " class="parallax__layer parallax__layer--back parallax__layer parallax__layer--base">
+            <div class="mainNav" >
                 <nav class="navbar navbar-expand-lg" class="text-center">
                     <a class="navbar-brand box" href="index.html"><i class="fas fa-recycle">EnvironmAtlanta</i></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -37,10 +37,11 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link color" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link color" href="index.html">Home <span
+                                        class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link color" href="recycleNearYou.html">Recycle Near Me</a>
@@ -77,6 +78,8 @@
 
             </div>
     </header>
+
+    
 
     <!-- Modal -->
     <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -120,41 +123,48 @@
         </div>
     </div>
 
-<div id="myDropDown">
+    <div id="myDropDown">
 
-    <div class="nav navbar-nav userNav_nav" class="down-content" >
-        <ul class="userNav_list">
+        <div class="nav navbar-nav userNav_nav" class="down-content">
+            <ul class="userNav_list">
 
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupModal">
-                SignUp
-            </button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupModal">
+                    SignUp
+                </button>
 
-            <li class="userNav_item">
-                <a class="userNav_link" href="/en-US/account/sign_in"><i class="fas fa-sign-in-alt"> Sign
-                        in</i></a>
-            </li>
-        </ul>
+                <li class="userNav_item">
+                    <a class="userNav_link" href="/en-US/account/sign_in"><i class="fas fa-sign-in-alt"> Sign
+                            in</i></a>
+                </li>
+            </ul>
+        </div>
+
     </div>
 
-</div>
+   
 
-<div class="content">
-        <div class="content-inside">
-          content
+    <div class="content parallax">
+        <div class="content-inside" class="parallax__layer parallax__layer--back">
+                <div class="jumbotron jumbotron-fluid" class="parallax__layer parallax__layer--base" id="mainJumbo">
+                        <div class="container" >
+                          <h1 class="display-4">Fluid jumbotron</h1>
+                          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                        </div>
+                      </div>
         </div>
-      </div>
-      <footer class="footer"></footer>
+    </div>
+    <footer class="footer"></footer>
 
 
-<script>
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 0) {
-    $('#myDropDown').fadeOut();
-  } else {
-    $('#myDropDown').fadeIn();
-  }
-});
-</script>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 0) {
+                $('#myDropDown').fadeOut();
+            } else {
+                $('#myDropDown').fadeIn();
+            }
+        });
+    </script>
     <script src="js/user.js">
     </script>
 

@@ -1,16 +1,8 @@
 $(document).ready(function() {
 
-    // User input
-    $("#submit").on("click", function (event) {
-        event.preventDefault();
-
-        const input = [];
-        let select = $('label');
-        console.log("boom");
-
-        input.push(select.value);
 // postContainer holds all of Community posts
 const postContainer = $("#showPosts");
+const newPost = $("#newPost")
 
 // Variable to hold Community posts
 const posts = "";
@@ -22,95 +14,64 @@ function addPost(event) {
   event.preventDefault();
   const userInput = $("#user").val().trim();
   const postInput = $("#post").val().trim();
-  if (!postInput){
-    return;
-  }
+  
   console.log(postInput)
 
   submitPost({user: userInput, body: postInput});
-  createRows();
+
 }
+
 function submitPost(postInput) {
-  $.post("/api/posts", postInput, function() {
-    postContainer.append(`<p>${postInput}</p>`);
+
+  $.post("/api/posts", postInput).then( function(postInput) {
+  
     console.log(postInput)
-})
+    createPost(postInput)
+    
+  })
+
+}
+
+function createPost(postInput) {
+  let formattedDate = new Date(postInput.createdAt);
+  formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm a");
+  postContainer.append(newPost);
+  newPost.append(`<p id='user'>${postInput.name}</p>`);
+  newPost.append(`<p id='post'>${postInput.body}</p>`);
+  newPost.append(`<p id='time'>${formattedDate}</p>`);
+ 
+  return createPost;
 }
 
 
+// // This function constructs a post's HTML
+// function createNewRow(postInput) {
+//   const formattedDate = new Date(postInput.createdAt);
+//   formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+//   const newPostCard = $("<div>");
+//   newPostCard.addClass("card");
+//   const deleteBtn = $("<button>");
+//   deleteBtn.text("x");
+//   deleteBtn.addClass("delete btn btn-danger");
+//   const newPostDate = $("<small>");
+//   const newPostCardBody = $("<div>");
+//   newPostCardBody.addClass("card-body");
+//   const newPostBody = $("<p>");
+//   newPostBody.text(post.body);
+//   newPostDate.text(formattedDate);;
+//   newPostCardHeading.append(deleteBtn);
+
+//   newPostCardBody.append(newPostBody);
+
+//   newPostCard.append(newPostCardBody);
+//   newPostCard.data("post", post);
+//   return newPostCard;
+// }
 
 
-// createRows handles appending all constructed post HTML inside postContainer
-function createRows() {
-  postContainer.empty();
-  var postsToAdd = [];
-  for (var i = 0; i < posts.length; i++) {
-    postsToAdd.push(createNewRow(posts[i]));
-  }
-  postContainer.append(postsToAdd);
-}
 
-// This function constructs a post's HTML
-function createNewRow(post) {
-  const formattedDate = new Date(post.createdAt);
-  formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
-  const newPostCard = $("<div>");
-  newPostCard.addClass("card");
-  const newPostCardHeading = $("<div>");
-  newPostCardHeading.addClass("card-header");
-  const deleteBtn = $("<button>");
-  deleteBtn.text("x");
-  deleteBtn.addClass("delete btn btn-danger");
-  const editBtn = $("<button>");
-  editBtn.text("EDIT");
-  editBtn.addClass("edit btn btn-info");
-  const newPostTitle = $("<h2>");
-  const newPostDate = $("<small>");
-  const newPostAuthor = $("<h5>");
-  newPostAuthor.text("Written by: Author name display is in next activity when we learn joins!");
-  newPostAuthor.css({
-    float: "right",
-    color: "blue",
-    "margin-top":
-    "-10px"
-  });
-  const newPostCardBody = $("<div>");
-  newPostCardBody.addClass("card-body");
-  const newPostBody = $("<p>");
-  newPostTitle.text(post.title + " ");
-  newPostBody.text(post.body);
-  newPostDate.text(formattedDate);
-  newPostTitle.append(newPostDate);
-  newPostCardHeading.append(deleteBtn);
-  newPostCardHeading.append(editBtn);
-  newPostCardHeading.append(newPostTitle);
-  newPostCardHeading.append(newPostAuthor);
-  newPostCardBody.append(newPostBody);
-  newPostCard.append(newPostCardHeading);
-  newPostCard.append(newPostCardBody);
-  newPostCard.data("post", post);
-  return newPostCard;
-}
-// Click event for the delete button
-$(document).on("click", "button.delete", handlePostDelete);
-// This function figures out which post we want to delete and then calls deletePost
-function handlePostDelete() {
-  var currentPost = $(this)
-    .parent()
-    .parent()
-    .data("post");
-  deletePost(currentPost.id);
-}
-
-        const userData = {
-            user: $("#users").val().trim(),
-            input: $("#inputs").val().trim()
-        }
-        console.log(userData);
-    });
 
 });
-
 
 
 
