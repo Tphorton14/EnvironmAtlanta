@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Community</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
+        integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+        <link rel="stylesheet" href="./style/style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="mainBack">
+            <div class="mainNav">
+                <nav class="navbar navbar-expand-lg" class="text-center">
+                    <a class="navbar-brand box" href="index.html"><i class="fas fa-recycle">EnvironmAtlanta</i></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link color" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="recycleNearYou.html">Recycle Near Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="charity.html">Charities</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="newsFeed.html">Current News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color" href="#">Community</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+            </div>
+            </nav>
+            <div>
+
+                <div class="nav navbar-nav userNav_nav">
+                  
+                </div>
+
+            </div>
+    </header>
+
+    <main>
+        <div class="communityBack">
+
+                <p>
+                        <h3>Post to the EnvironmAtlanta Community</h3>
+                    </p>
+        </div>>
+        <hr>
+        
+    <div class="container">
+        <div class="row" id="createPosts">
+           
+            <div class="col-md-5 offset-md-3">
+                <form id="communityPost">
+                    <div class="form-group">
+                        <label for="user">User:</label>
+                        <textarea class="form-control" rows="1" id="user"></textarea>
+                        <br>
+                        <label for="post">Share your thoughts...</label>
+                        <textarea class="form-control" rows="4" id="post"></textarea>
+                        <br>
+                        <button type="submit" class="btn btn-info submit btn-sm" id="postSubmits">Post!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class= "container" id="showPosts">
+            <div class="row">
+                <div class="col" id="newPost"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+            <div class="content-inside">
+                
+            </div>
+        </div>
+        <footer class="footer"></footer>
+<script src="community.js"></script>
+</body>
+
+</html>
