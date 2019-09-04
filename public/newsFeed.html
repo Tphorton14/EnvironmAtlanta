@@ -21,12 +21,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-<<<<<<< HEAD
-=======
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
->>>>>>> ff6544f4711898f42f28d21ce1419c54b16f2cae
     <link rel="stylesheet" href="./style/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
@@ -69,11 +66,8 @@
 
                         </div>
 
-<<<<<<< HEAD
                 </div>
-=======
                         </ul>
->>>>>>> ff6544f4711898f42f28d21ce1419c54b16f2cae
 
                 <div>
                 </div>
@@ -98,24 +92,19 @@
                     </div>
 
                 </div>
-<<<<<<< HEAD
-=======
 
-            </div> -->
+            </div>
             </div>
             </nav>
->>>>>>> ff6544f4711898f42f28d21ce1419c54b16f2cae
     </header>
     <div class="spacer">
         &nbsp;
     </div>
     <div class="container-fluid">
         <div class="recycling-news-ticker" id="json">
-<<<<<<< HEAD
             <div class="recycling-news" id="newsFeed">
-=======
             <div class="recycling-news">
->>>>>>> ff6544f4711898f42f28d21ce1419c54b16f2cae
+
                 <ul id="newsFeedList">
                     <li class="recyling-news-feed"></li>
                 </ul>
@@ -127,16 +116,13 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 
     <div class="content">
         <div class="content-inside">
-            content
+            
         </div>
     </div>
     <footer class="footer"></footer>
-=======
->>>>>>> ff6544f4711898f42f28d21ce1419c54b16f2cae
     <script>
         $(document).ready(function () {
             $.get("api/newsfeed").then(
@@ -144,11 +130,8 @@
                     console.log(response);
                     let res = response;
                     let articles = [];
-<<<<<<< HEAD
                     for (let i = 0; i < res.articles.length; i++) {
-=======
                     for (let i = 0; i < res.articles.length - 1; i++) {
->>>>>>> ff6544f4711898f42f28d21ce1419c54b16f2cae
                         article = [`<div class = "jumbotron jumbotron-fluid" id= "newsArticleTron">
                         <h4 id = "articleTitle">${res.articles[i].title}</h4>
                             </header> 
@@ -171,7 +154,6 @@
         }
         );
 
-<<<<<<< HEAD
         $(window).scroll(function () {
             if ($(this).scrollTop() > 0) {
                 $('#myDropDown').fadeOut();
@@ -188,8 +170,6 @@
 //   }
 // });
 
-=======
->>>>>>> ff6544f4711898f42f28d21ce1419c54b16f2cae
     // });
 
 
