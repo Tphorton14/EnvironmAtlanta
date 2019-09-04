@@ -22,12 +22,19 @@ body {
     border:1px;
     border-color:green;
     border-style: solid;
+    background-color:darkolivegreen;
+    color:white;
   }
-  .welcome{
+  .row{
 
     background-color: darkgreen;
     color:white;
   } 
+  #go{
+      height:40px;
+      width:50px;
+    
+  }
 .back {
     position: relative;
     background: url("https://s.hdnux.com/photos/75/10/13/16024311/4/rawImage.jpg") #414143;
