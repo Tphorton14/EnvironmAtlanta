@@ -59,26 +59,30 @@
 
 
                     </div>
+                    
             </div>
+
             <div>
+            </div>
+        </nav>
 
-                <!-- <div class="nav navbar-nav userNav_nav" id = "signIn">
+        <div id="myDropDown">
+
+                <div class="nav navbar-nav userNav_nav" class="down-content" >
                     <ul class="userNav_list">
+            
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupModal">
+                            SignUp
+                        </button>
+            
                         <li class="userNav_item">
-
-                        <li class="userNav_item">
-                            <a class="userNav_link" href="/en-US/account/sign_up">Sign up</a>
-                        </li>
-
-                        <li class="userNav_item">
-                            <a class="userNav_link" href="/en-US/account/sign_in">Sign in</a>
+                            <a class="userNav_link" href="/en-US/account/sign_in"><i class="fas fa-sign-in-alt"> Sign
+                                    in</i></a>
                         </li>
                     </ul>
                 </div>
-
-            </div> -->
+            
             </div>
-        </nav>
     </header>
     <div class="spacer">
         &nbsp;
@@ -126,6 +130,14 @@
         
        }
    );
+
+   $(window).scroll(function() {
+  if ($(this).scrollTop() > 0) {
+    $('#myDropDown').fadeOut();
+  } else {
+    $('#myDropDown').fadeIn();
+  }
+});
         
     // });
 
