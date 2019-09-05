@@ -14,7 +14,6 @@
   height: 50vh;
   overflow-x: hidden;
   overflow-y: auto;
-
   
     top: 0;
     right: 0;
@@ -116,6 +115,15 @@ header {
     margin: 0px;
 }
 
+#header {
+    width: 100%;
+    background: #00b944;
+    z-index: 103;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(180, 180, 180, 0.904);
+    position: fixed;
+    margin: 0px;
+}
+
 .mainNav
  {
     width: 1300px;
@@ -144,7 +152,7 @@ header {
 
 .mainLand{
     width: 950px;
-    margin: 10% 0px 0px 25%;
+    margin: 10% 0px 0px 20%;
     padding: 0px 40px 0px 40px;
     
 }
