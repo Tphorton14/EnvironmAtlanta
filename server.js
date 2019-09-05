@@ -7,6 +7,18 @@ const db = require("./models");
 
 const app = express();
 
+if(PerformanceObserverEntryList.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+
+} else {
+  connection = mysqp.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'Sn@wball2018',
+    database: 'resycle_db'
+  });
+};
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
