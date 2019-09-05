@@ -1,7 +1,6 @@
 
 
 var path = require("path");
-config = require('../config/config.json');
 
 module.exports = function (app) {
   app.get("/recycleNearYou", function (req, res) {
