@@ -40,8 +40,9 @@
   }
   .row{
 
-    background-color: darkgreen;
+    background-color: #00b944b0;
     color:white;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.16), 0 2px 10px 0 rgba(0,0,0,.12);
   } 
   #go{
       height:40px;
@@ -280,6 +281,14 @@ a:active {
   html, body {
     height: 75%;
     margin: 0;
+  }
+
+  .title{
+      text-align: center;
+      color: white;
+      font-family: 'PT Serif', serif;
+      font-size: 40px;
+     
   }
   
   .content {
