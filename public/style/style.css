@@ -9,9 +9,22 @@
     background-size: cover;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
     background-blend-mode: multiply;
+     
+  /* perspective: 1px;
+  height: 50vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; */
+
+    
 }
 
-body {
+.nearYouBack {
     background-image: url("../images/grass.png");
      background-size:cover;
      background-repeat: no-repeat;
@@ -27,8 +40,9 @@ body {
   }
   .row{
 
-    background-color: darkgreen;
+    background-color: #00b944b0;
     color:white;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.16), 0 2px 10px 0 rgba(0,0,0,.12);
   } 
   #go{
       height:40px;
@@ -92,23 +106,14 @@ ul {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
-.userNav_item {
-    font-size: 10px;
-    font-size: 1rem;
-    display: inline-block;
-    padding: 5px;
-    text-transform: uppercase;
-    list-style: none;
-    border-left: 1px solid #dadada;
-    text-align: center;
-}
 
-.mainBack {
+header {
     width: 100%;
     background: #00b944;
     z-index: 103;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(180, 180, 180, 0.904);
-    position: fixed;
+    position: absolute;
+    margin: 0px;
 }
 
 .mainNav
@@ -120,14 +125,37 @@ ul {
     
 }
 
+.sign{
+    margin: 0px 10px 0px 15px;
+}
+
 #mainJumbo{
     width: 950px;
     margin: 25% 0px 0px 20%;
     padding: 0px 40px 0px 40px;
     clear: all;
 }
+
+.mainCharity {
+    width: 950px;
+    margin: 25% 0px 0px 20%;
+    padding: 0px 40px 0px 40px;
+}
+
+.mainLand{
+    width: 950px;
+    margin: 10% 0px 0px 25%;
+    padding: 0px 40px 0px 40px;
+    
+}
+
+.jumboBack{
+    background: #00b944;
+}
 .container {
-    padding-top: 140px;
+    padding-top: 10px;
+    color: #00b944;
+    font-family: 'PT Serif', serif;
 }
 
 #newPost {
@@ -249,9 +277,26 @@ a:active {
     border: none;
     cursor: pointer;
   }
+
+  html, body {
+    height: 75%;
+    margin: 0;
+  }
+
+  .title{
+      text-align: center;
+      color: white;
+      font-family: 'PT Serif', serif;
+      font-size: 40px;
+     
+  }
   
   .content {
     min-height: 100%;
+  }
+
+  .contents {
+    min-height: 60%;
   }
   .content-inside {
     padding: 20px;
@@ -268,14 +313,14 @@ a:active {
 }
 
 
-  .parallax {
-      position: absolute;
+  /* .parallax {
+      position: ;
       top: 200px;
   perspective: 1px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-}
+} */
 .parallax__layer {
     position: absolute;
     top: 0;
@@ -284,7 +329,7 @@ a:active {
     left: 0;
   }
   .parallax__layer--base {
-    transform: translateZ(0);
+    transform: translateZ(1);
   }
   .parallax__layer--back {
     transform: translateZ(-1px) scale(2);

@@ -37,7 +37,9 @@
             <div class="mainNav">
                 <div class="mainNav">
                     <nav class="navbar navbar-expand-lg" class="text-center">
-                        <a class="navbar-brand box" href="index.html"><i class="fas fa-recycle">EnvironmAtlanta</i></a>
+                        <a class="navbar-brand box" href="#"><i class="fas fa-recycle recycle">
+                                <div>EnvironmAtlanta</div>
+                            </i></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -62,6 +64,15 @@
                                 <li class="nav-item">
                                     <a class="nav-link color" href="community.html">Community</a>
                                 </li>
+                                <li class="nav-item" class="sign">
+                                        <button type="button" class="btn btn-dark sign" class="sign"> <a href="/auth/google">Sign In with
+                                                Google</a> </button>
+                                    </li>
+                                    <li class="nav-item" id="welcomeUser">
+                                    </li>
+                                    <li class="nav-item" class="sign">
+                                        <button type="button" class="btn btn-dark" class="sign"><a href="/logout"> SignOut </a> </button>
+                                    </li>
 
                             </ul>
 
@@ -103,6 +114,16 @@
     <div class="spacer">
         &nbsp;
     </div>
+    <div class="spacer">
+        &nbsp;
+    </div>
+    <div class="spacer">
+        &nbsp;
+    </div>
+    <div class="spacer">
+        &nbsp;
+    </div>
+    
     <div class="container-fluid">
         <div class="recycling-news-ticker" id="json">
             <div class="recycling-news">
@@ -117,6 +138,13 @@
             </div>
         </div>
     </div>
+
+    <div class="content">
+        <div class="content-inside">
+
+        </div>
+    </div>
+    <footer class="footer"></footer>
     <script>
         $(document).ready(function () {
             $.get("api/newsfeed").then(

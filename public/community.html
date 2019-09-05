@@ -19,16 +19,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
-        <link rel="stylesheet" href="./style/style.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
 </head>
 
-<body>
+<body class="communityBack">
     <header>
         <div class="mainBack">
             <div class="mainNav">
                 <nav class="navbar navbar-expand-lg" class="text-center">
-                    <a class="navbar-brand box" href="index.html"><i class="fas fa-recycle">EnvironmAtlanta</i></a>
+                    <a class="navbar-brand box" href="#"><i class="fas fa-recycle recycle">
+                            <div>EnvironmAtlanta</div>
+                        </i></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +40,8 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link color" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link color" href="index.html">Home <span
+                                        class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link color" href="recycleNearYou.html">Recycle Near Me</a>
@@ -52,6 +55,15 @@
                             <li class="nav-item">
                                 <a class="nav-link color" href="#">Community</a>
                             </li>
+                            <li class="nav-item" class="sign">
+                                    <button type="button" class="btn btn-dark sign" class="sign"> <a href="/auth/google">Sign In with
+                                            Google</a> </button>
+                                </li>
+                                <li class="nav-item" id="welcomeUser">
+                                </li>
+                                <li class="nav-item" class="sign">
+                                    <button type="button" class="btn btn-dark" class="sign"><a href="/logout"> SignOut </a> </button>
+                                </li>
 
                         </ul>
 
@@ -61,52 +73,68 @@
             <div>
 
                 <div class="nav navbar-nav userNav_nav">
-                  
+
                 </div>
 
             </div>
     </header>
-
-    <main>
-        <div class="communityBack">
-
-                <p>
-                        <h3>Post to the EnvironmAtlanta Community</h3>
-                    </p>
-        </div>>
-        <hr>
-        
-    <div class="container">
-        <div class="row" id="createPosts">
-           
-            <div class="col-md-5 offset-md-3">
-                <form id="communityPost">
-                    <div class="form-group">
-                        <label for="user">User:</label>
-                        <textarea class="form-control" rows="1" id="user"></textarea>
-                        <br>
-                        <label for="post">Share your thoughts...</label>
-                        <textarea class="form-control" rows="4" id="post"></textarea>
-                        <br>
-                        <button type="submit" class="btn btn-info submit btn-sm" id="postSubmits">Post!</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class= "container" id="showPosts">
-            <div class="row">
-                <div class="col" id="newPost"></div>
-            </div>
-        </div>
+    <div class="spacer">
+        &nbsp;
     </div>
+    <div class="spacer">
+            &nbsp;
+        </div>
+        <div class="spacer">
+                &nbsp;
+            </div>
+            <div class="spacer">
+                    &nbsp;
+                </div>
+    <main>
+        <div>
 
-    <div class="content">
+            <p>
+                <h3 class="title">Post to the EnvironmAtlanta Community</h3>
+            </p>
+        </div>>
+        
+
+        <div class="container">
+            <div class="row" id="createPosts">
+
+                <div class="col-md-5 offset-md-3">
+                    <form id="communityPost">
+                        <div class="form-group">
+                            <label for="user">User:</label>
+                            <textarea class="form-control" rows="1" id="user"></textarea>
+                            <br>
+                            <label for="post">Share your thoughts...</label>
+                            <textarea class="form-control" rows="4" id="post"></textarea>
+                            <br>
+                            <button type="submit" class="btn btn-info submit btn-sm" id="postSubmits">Post!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container" id="showPosts">
+                <div class="row">
+                    <div class="col" id="newPost"></div>
+                </div>
+            </div>
+        </div>
+
+        </main>
+
+
+        <div class="contents">
             <div class="content-inside">
-                
+
             </div>
         </div>
         <footer class="footer"></footer>
-<script src="community.js"></script>
+
+
+        <script src="community.js"></script>
 </body>
 
 </html>
