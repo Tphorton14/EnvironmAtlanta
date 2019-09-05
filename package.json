@@ -22,7 +22,7 @@
     "nodemon": "^1.19.1"
   },
     "scripts": {
-      "start": "node ./bin/www",
+      "start": "node ./server.js",
       "seed": "node ./seeds/users-db.js"
   },
   "repository": {
