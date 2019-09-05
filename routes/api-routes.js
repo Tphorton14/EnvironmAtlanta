@@ -127,8 +127,8 @@ module.exports = function (app) {
   app.get("/api/newsfeed", function (req, res) {
     newsapi.v2.everything({
       q: 'recycle',
-      sources: 'reddit-r-all, newsweek, the-huffington-post, wired, associated-press, cbs-news, national-geographic, new-scientist',
-      domains: 'reddit.com, newsweek.com, huffpost.com, wired.com, apnews.com, cbsnews.com, nationalgeographic.com, newscientist.com',
+      sources: 'reddit-r-all, newsweek, the-huffington-post, associated-press, cbs-news, national-geographic, new-scientist',
+      domains: 'reddit.com, newsweek.com, huffpost.com, apnews.com, cbsnews.com, nationalgeographic.com, newscientist.com',
       from: lastWeekString,
       to: todayString,
       language: 'en',
