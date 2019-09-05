@@ -21,9 +21,9 @@
   "devDependencies": {
     "nodemon": "^1.19.1"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "scripts": {
+      "start": "node ./bin/www",
+      "seed": "node ./seeds/users-db.js"
   },
   "repository": {
     "type": "git",
