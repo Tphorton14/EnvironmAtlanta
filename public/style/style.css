@@ -24,10 +24,12 @@
 }
 
 .nearYouBack {
-    background-image: url("../images/grass.png");
-     background-size:cover;
-     background-repeat: no-repeat;
-     height: 200vh;
+    position: relative;
+    background: url(../images/grass.png) #414143;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    background-blend-mode: multiply;
  }
 
  #location{
