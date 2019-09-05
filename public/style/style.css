@@ -36,7 +36,7 @@
     border:1px;
     border-color:green;
     border-style: solid;
-    background-color:darkolivegreen;
+    background-color: #00b944b0;
     color:white;
   }
   .row{
@@ -45,6 +45,11 @@
     color:white;
     box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.16), 0 2px 10px 0 rgba(0,0,0,.12);
   } 
+
+  #rows{
+      background: rgba(255, 255, 255, 0);
+    color:white;
+  }
   #go{
       height:40px;
       width:50px;
