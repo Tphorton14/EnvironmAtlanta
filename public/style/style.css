@@ -9,6 +9,19 @@
     background-size: cover;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
     background-blend-mode: multiply;
+     
+  /* perspective: 1px;
+  height: 50vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; */
+
+    
 }
 
 .nearYouBack {
@@ -98,7 +111,8 @@ header {
     background: #00b944;
     z-index: 103;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(180, 180, 180, 0.904);
-    position: fixed;
+    position: absolute;
+    margin: 0px;
 }
 
 .mainNav
@@ -110,14 +124,37 @@ header {
     
 }
 
+.sign{
+    margin: 0px 10px 0px 15px;
+}
+
 #mainJumbo{
     width: 950px;
     margin: 25% 0px 0px 20%;
     padding: 0px 40px 0px 40px;
     clear: all;
 }
+
+.mainCharity {
+    width: 950px;
+    margin: 25% 0px 0px 20%;
+    padding: 0px 40px 0px 40px;
+}
+
+.mainLand{
+    width: 950px;
+    margin: 10% 0px 0px 25%;
+    padding: 0px 40px 0px 40px;
+    
+}
+
+.jumboBack{
+    background: #00b944;
+}
 .container {
-    padding-top: 140px;
+    padding-top: 10px;
+    color: #00b944;
+    font-family: 'PT Serif', serif;
 }
 
 #newPost {
@@ -239,6 +276,11 @@ a:active {
     border: none;
     cursor: pointer;
   }
+
+  html, body {
+    height: 75%;
+    margin: 0;
+  }
   
   .content {
     min-height: 100%;
@@ -258,14 +300,14 @@ a:active {
 }
 
 
-  .parallax {
-      position: absolute;
+  /* .parallax {
+      position: ;
       top: 200px;
   perspective: 1px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-}
+} */
 .parallax__layer {
     position: absolute;
     top: 0;
@@ -274,7 +316,7 @@ a:active {
     left: 0;
   }
   .parallax__layer--base {
-    transform: translateZ(0);
+    transform: translateZ(1);
   }
   .parallax__layer--back {
     transform: translateZ(-1px) scale(2);
