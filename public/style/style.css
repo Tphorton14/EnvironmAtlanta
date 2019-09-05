@@ -346,3 +346,35 @@ a:active {
 		width: 90%;
 	}
 }
+
+.box.flex {
+    display: inline-flex;
+    /* align-content: center; */
+    margin: 25%;
+    margin: 50 auto;
+    height: auto;
+    width: 65vw;
+    background-color: #282828;
+    text-align: center;
+  }
+
+  #charityContainer {
+    margin: 0 auto;
+    vertical-align: 0%;
+    
+}
+  
+
+.backFixed {
+    position: fixed;
+    background: url("https://s.hdnux.com/photos/75/10/13/16024311/4/rawImage.jpg") #414143;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    background-blend-mode: multiply;
+}
+.charityTitle {
+    text-emphasis: bold;
+    font-weight: 550;
+    color: olivedrab;
+}
