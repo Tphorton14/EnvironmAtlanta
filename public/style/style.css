@@ -294,6 +294,10 @@ a:active {
   .content {
     min-height: 100%;
   }
+
+  .contents {
+    min-height: 60%;
+  }
   .content-inside {
     padding: 20px;
     padding-bottom: 50px;
