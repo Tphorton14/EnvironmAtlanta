@@ -16,19 +16,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/style.css" type="text/css">
 </head>
 
-<body class="indexBack paralax">
+<body class="indexBack">
+
+    
 
     <header>
         <div class="mainBack ">
             <div class="mainNav" >
                 <nav class="navbar navbar-expand-lg" class="text-center">
-                    <a class="navbar-brand box" href="index.html"><i class="fas fa-recycle">EnvironmAtlanta</i></a>
+                        <a class="navbar-brand box" href="#"><i class="fas fa-recycle recycle">
+                                <div>EnvironmAtlanta</div>
+                            </i></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -53,14 +58,14 @@
                             <li class="nav-item">
                                 <a class="nav-link color" href="community.html">Community</a>
                             </li>
-                            <li class="nav-item">
-                                <button type="button" class="btn btn-dark"> <a href="/auth/google">Sign In with
+                            <li class="nav-item" class="sign">
+                                <button type="button" class="btn btn-dark sign" class="sign"> <a href="/auth/google">Sign In with
                                         Google</a> </button>
                             </li>
                             <li class="nav-item" id="welcomeUser">
                             </li>
-                            <li class="nav-item">
-                                <button type="button" class="btn btn-dark"><a href="/logout"> SignOut </a> </button>
+                            <li class="nav-item" class="sign">
+                                <button type="button" class="btn btn-dark" class="sign"><a href="/logout"> SignOut </a> </button>
                             </li>
                         </ul>
                     </div>
@@ -68,13 +73,26 @@
             </div>
         </div>
     </header>
+    <div class="spacer">
+            &nbsp;
+        </div>
 
+    <main>
+        <div class="mainLand ">
+            <div class="jumbotron jumbotron-fluid text-center" class="jumboBack parallax-layer parallax_layer--base">
+                    <div class="container">
+                      <h1 class="display-4">EnvironmAtlanta</h1>
+                      <p class="lead">“An interactive site to connect conscientious users as they strive to commit to eco-friendly practices in order to better the environment of their communities and around the world.”</p>
+                    </div>
+                  </div>
+                </div>
+
+
+    </main>
 
     
 
-    
-
-    <div id="myDropDown">
+    <!-- <div id="myDropDown">
 
         <div class="nav navbar-nav userNav_nav" class="down-content">
             <ul class="userNav_list">
@@ -90,23 +108,37 @@
             </ul>
         </div>
 
-    </div>
+    </div> -->
 
    
-    <footer class="footer"></footer>
+    <div class="content">
+            <div class="content-inside">
+                
+            </div>
+        </div>
+        <footer class="footer"></footer>
 
-
+        
     <script>
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 0) {
-                $('#myDropDown').fadeOut();
-            } else {
-                $('#myDropDown').fadeIn();
-            }
-        });
+
+
+// const image = document.getElementsByClassName("indexBack");
+// new simpleParallax(image, {
+//     delay: .6,
+// 	transition: 'cubic-bezier(0,0,0,1)'
+// });
+
+        // $(window).scroll(function () {
+        //     if ($(this).scrollTop() > 0) {
+        //         $('#myDropDown').fadeOut();
+        //     } else {
+        //         $('#myDropDown').fadeIn();
+        //     }
+        // });
     </script>
-    <script src="js/user.js">
-    </script>
+
+<script src="js/user.js">
+</script>
 
 
 </body>
