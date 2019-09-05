@@ -25,7 +25,6 @@ const session = require('express-session');
 // Routes
 // =============================================================
 module.exports = function (app) {
-config = require('../config/config.json');
 
   // app.get('/api/current-user', function(req, res) {
   //   console.log('api/current-user');
