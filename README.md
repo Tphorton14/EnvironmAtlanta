@@ -1,6 +1,15 @@
 # EnvironmAtlanta
 
 EnvironmAtlanta
+
+This project was a group collaboration between these 5 people:
+
+Abbi DeLeve https://github.com/abbimdeleve
+Krithika Subramanian [https://github.com/krithis2991]
+Zach Scott https://github.com/zscott92
+Taylor Horton https://github.com/Tphorton14
+Chaitra Nagarajaiah https://github.com/ChaitraNagarajaiah
+
 Team Members:
 Abbi DeLeve, Krithika Submaranian, Zach Scott, Taylor Horton, Chaitra Nagarajaiah
 Description:
