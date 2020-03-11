@@ -39,6 +39,6 @@ Abbi: User Login & Community Page
 
 ![Demo of Game](https://github.com/Tphorton14/EnvironmAtlanta/blob/master/gifs/charities.gif)
 
-![Demo of Game](https://github.com/Tphorton14/EnvironmAtlanta/blob/master/gifs/nearMe.gif)
+![Demo of Game](https://github.com/Tphorton14/EnvironmAtlanta/blob/master/gifs/news.gif)
 
 ![Demo of Game](https://github.com/Tphorton14/EnvironmAtlanta/blob/master/gifs/community.gif)
