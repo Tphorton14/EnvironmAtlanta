@@ -29,7 +29,7 @@ Chaitra: Recycling Near You API
 Krithika: User Login & Community Page
 Abbi: User Login & Community Page
 
-#App Demo
+# App Demo
 
 ![Demo of Game](https://github.com/Tphorton14/EnvironmAtlanta/blob/master/gifs/home.gif)
 
