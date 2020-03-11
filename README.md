@@ -25,8 +25,20 @@ Initial User Stories:
 Sketch of Product
 
 Rough Breakdown of Tasks:
-Taylor: Initial front-end styling
+Taylor: Initial front-end styling and Project Managment 
 Zach: Newsfeed API
 Chaitra: Recycling Near You API
 Krithika: User Login & Community Page
 Abbi: User Login & Community Page
+
+#App Demo
+
+![Demo of Game]()
+
+![Demo of Game](https://github.com/Tphorton14/EnvironmAtlanta/blob/master/gifs/nearMe.gif)
+
+![Demo of Game](https://github.com/Tphorton14/EnvironmAtlanta/blob/master/gifs/charities.gif)
+
+![Demo of Game](https://github.com/Tphorton14/EnvironmAtlanta/blob/master/gifs/nearMe.gif)
+
+![Demo of Game](https://github.com/Tphorton14/EnvironmAtlanta/blob/master/gifs/community.gif)
