@@ -33,7 +33,7 @@ Abbi: User Login & Community Page
 
 #App Demo
 
-![Demo of Game]()
+![Demo of Game](https://github.com/Tphorton14/EnvironmAtlanta/blob/master/gifs/home.gif)
 
 ![Demo of Game](https://github.com/Tphorton14/EnvironmAtlanta/blob/master/gifs/nearMe.gif)
 
