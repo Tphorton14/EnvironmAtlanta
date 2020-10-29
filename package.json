@@ -16,7 +16,7 @@
     "passport-google-oauth": "^2.0.0",
     "sequelize": "^5.22.3",
     "sequelize-cli": "^5.5.0",
-    "simple-parallax-js": "^5.6.1"
+    "simple-parallax-js": "^5.6.2"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
